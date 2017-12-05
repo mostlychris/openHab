@@ -1,0 +1,1338 @@
+Group GAll
+Group GPersist (GAll)
+Group GSystem "System Information [%d]" <office>
+
+Group GRooms (GAll)
+Group GScenes (GAll)
+Group GDevices (GAll)
+
+Group GRoom1 "Front Hall [%d]" <office> (GRooms)
+Group GRoom2 "Garage [%d]" <office> (GRooms)
+Group GRoom3 "Living Room [%d]" <office> (GRooms)
+Group GRoom4 "Upstairs Hallway [%d]" <office> (GRooms)
+Group GRoom5 "Backyard [%d]" <office> (GRooms)
+Group GRoom6 "Whole House [%d]" <office> (GRooms)
+Group GRoom8 "Outside [%d]" <office> (GRooms)
+Group GRoom9 "Kitchen [%d]" <office> (GRooms)
+Group GRoom10 "Study [%d]" <office> (GRooms)
+Group GRoom11 "Upstairs Play [%d]" <office> (GRooms)
+Group GRoom12 "Master [%d]" <office> (GRooms)
+Group GRoom13 "Attic [%d]" <office> (GRooms)
+
+Group Housetemps "House Nest"
+Group DownstairsTemps "Downstairs Nest" (Housetemps)
+Group UpstairsTemps "Upstairs Nest" (Housetemps)
+Group Lights "Lights"
+Group InsideLights (Lights)
+Group OutsideLights (Lights)
+Group DSC "DSC"
+
+
+/* Device - ZWave */
+Number   ZWaveId "ID [%d]" (GDevices) {mios="unit:house,device:1/id"}
+String   ZWaveDeviceStatus "ZWave Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:1/status"}
+String   ZWaveUse45 "ZWave Use45 [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/Use45"}
+String   ZWaveUseMR "ZWave UseMR [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/UseMR"}
+String   ZWaveLimitNeighbors "ZWave LimitNeighbors [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LimitNeighbors"}
+DateTime ZWaveLastUpdate3 "ZWave Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LastUpdate"}
+String   ZWaveAutoConfigure "ZWave AutoConfigure [%s]" (GDevices) {mios="unit:house,device:1/service/HaDevice1/AutoConfigure"}
+String   ZWaveNetStatusID "ZWave NetStatusID [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/NetStatusID"}
+String   ZWaveNetStatusText "ZWave NetStatusText [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/NetStatusText"}
+String   ZWaveLockComPort "ZWave LockComPort [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LockComPort"}
+String   ZWaveComPort "ZWave ComPort [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/ComPort"}
+String   ZWavePollingEnabled "ZWave Polling Enabled [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/PollingEnabled"}
+String   ZWavePollDelayInitial "ZWave PollDelayInitial [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/PollDelayInitial"}
+String   ZWavePollDelayDeadTime "ZWave PollDelayDeadTime [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/PollDelayDeadTime"}
+String   ZWavePollMinDelay "ZWave PollMinDelay [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/PollMinDelay"}
+String   ZWavePollFrequency "ZWave PollFrequency [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/PollFrequency"}
+String   ZWaveVersionInfo "ZWave VersionInfo [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/VersionInfo"}
+String   ZWaveHomeID "ZWave HomeID [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/HomeID"}
+String   ZWaveRole "ZWave Role [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/Role"}
+DateTime ZWaveLastDongleBackup "ZWave LastDongleBackup [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LastDongleBackup"}
+Number   ZWaveLastTimeOffset "ZWave Last Time Offset [%.4f]" (GDevices) {mios="unit:house,device:1/service/HaDevice1/LastTimeOffset"}
+String   ZWaveLastError "ZWave Last Error [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LastError"}
+DateTime ZWaveLastHeal "ZWave Last Heal [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LastHeal"}
+DateTime ZWaveLastRouteFailure "ZWave Last Route Failure [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/LastRouteFailure"}
+DateTime ZWaveLastUpdate "ZWave Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:1/service/HaDevice1/LastUpdate"}
+String   ZWaveSceneIDs "ZWave SceneIDs [%s]" (GDevices) {mios="unit:house,device:1/service/ZWaveNetwork1/SceneIDs"}
+String   ZWaveVersion "ZWave Version [%s]" (GDevices) {mios="unit:house,device:1/service/urn:rts-services-com:serviceId:vcs/Version"}
+String   ZWaveServer "ZWave Server [%s]" (GDevices) {mios="unit:house,device:1/service/urn:rts-services-com:serviceId:vcs/Server"}
+String   ZWaveInitVersion "ZWave InitVersion [%s]" (GDevices) {mios="unit:house,device:1/service/urn:rts-services-com:serviceId:vcs/InitVersion"}
+Number   ZWaveCommFailure "ZWave Comms Failure [%d]" (GDevices) {mios="unit:house,device:1/service/HaDevice1/CommFailure"}
+DateTime ZWaveCommFailureTime "ZWave Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:1/service/HaDevice1/CommFailureTime"}
+String   ZWaveCommFailureAlarm "ZWave Comms Failure Alarm [%s]" (GDevices) {mios="unit:house,device:1/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - _Scene Controller */
+Number   SceneControllerId "ID [%d]" (GDevices) {mios="unit:house,device:2/id"}
+String   SceneControllerDeviceStatus "_Scene Controller Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:2/status"}
+String   SceneControllerScenes "_Scene Controller Scenes [%s]" (GDevices) {mios="unit:house,device:2/service/SceneController1/Scenes"}
+String   SceneControllerIgnoreRoom "_Scene Controller Ignore Room [%s]" (GDevices) {mios="unit:house,device:2/service/HaDevice1/IgnoreRoom"}
+Number   SceneControllerTarget "_Scene Controller Target [%d]" (GDevices) {mios="unit:house,device:2/service/SwitchPower1/Target"}
+Number   SceneControllerslSceneActivated "_Scene Controller Scene Activated [%d]" (GDevices) {mios="unit:house,device:2/service/SceneController1/sl_SceneActivated"}
+DateTime SceneControllerLastSceneTime "_Scene Controller Last Scene Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:2/service/SceneController1/LastSceneTime"}
+Switch   SceneControllerStatus "_Scene Controller Status" (GDevices) {mios="unit:house,device:2/service/SwitchPower1/Status"}
+
+/* Device - Front Porch Light */
+Number   FrontPorchLightId "ID [%d]" (GDevices) {mios="unit:house,device:3/id"}
+String   FrontPorchLightDeviceStatus "Front Porch Light Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:3/status"}
+Number   FrontPorchLightConfigured "Front Porch Light Configured [%d]" (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/Configured"}
+String   FrontPorchLightModeSetting "Front Porch Light Mode Setting [%s]" (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/ModeSetting"}
+DateTime FrontPorchLightLastUpdate "Front Porch Light Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/LastUpdate"}
+DateTime FrontPorchLightFirstConfigured "Front Porch Light First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/FirstConfigured"}
+Switch   FrontPorchLightStatus "Front Porch Light Status" (GDevices,GRoom1,OutsideLights) {mios="unit:house,device:3/service/SwitchPower1/Status"}
+Number   FrontPorchLightTarget "Front Porch Light Target [%d]" (GDevices,GRoom1) {mios="unit:house,device:3/service/SwitchPower1/Target"}
+Number   FrontPorchLightUserSuppliedWattage "Front Porch Light User Supplied Wattage [%.1f W]" (GDevices,GRoom1) {mios="unit:house,device:3/service/EnergyMetering1/UserSuppliedWattage"}
+Number   FrontPorchLightWatts "Front Porch Light Watts [%.1f W]" (GDevices,GRoom1) {mios="unit:house,device:3/service/EnergyMetering1/Watts"}
+String   FrontPorchLightLog "Front Porch Light Log [%s]" (GDevices,GRoom1) {mios="unit:house,device:3/service/EnergyMetering1/Log"}
+Number   FrontPorchLightConsecutivePollFails "Front Porch Light Consecutive Poll Fails [%d]" (GDevices,GRoom1) {mios="unit:house,device:3/service/ZWaveNetwork1/ConsecutivePollFails"}
+DateTime FrontPorchLightLastPollSuccess "Front Porch Light Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:3/service/ZWaveNetwork1/LastPollSuccess"}
+Number   FrontPorchLightCommFailure "Front Porch Light Comms Failure [%d]" (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/CommFailure"}
+DateTime FrontPorchLightCommFailureTime "Front Porch Light Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/CommFailureTime"}
+Number   FrontPorchLightPollRatings "Front Porch Light Poll Ratings [%.4f]" (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/PollRatings"}
+String   FrontPorchLightCommFailureAlarm "Front Porch Light Comms Failure Alarm [%s]" (GDevices,GRoom1) {mios="unit:house,device:3/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Driveway Lights */
+Number   DrivewayLightsId "ID [%d]" (GDevices) {mios="unit:house,device:4/id"}
+String   DrivewayLightsDeviceStatus "Driveway Lights Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:4/status"}
+Number   DrivewayLightsConfigured "Driveway Lights Configured [%d]" (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/Configured"}
+String   DrivewayLightsModeSetting "Driveway Lights Mode Setting [%s]" (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/ModeSetting"}
+DateTime DrivewayLightsLastUpdate "Driveway Lights Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/LastUpdate"}
+DateTime DrivewayLightsFirstConfigured "Driveway Lights First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/FirstConfigured"}
+Switch   DrivewayLightsStatus "Driveway Lights Status" (GDevices,GRoom2,OutsideLights) {mios="unit:house,device:4/service/SwitchPower1/Status"}
+Number   DrivewayLightsTarget "Driveway Lights Target [%d]" (GDevices,GRoom2) {mios="unit:house,device:4/service/SwitchPower1/Target"}
+Number   DrivewayLightsUserSuppliedWattage "Driveway Lights User Supplied Wattage [%.1f W]" (GDevices,GRoom2) {mios="unit:house,device:4/service/EnergyMetering1/UserSuppliedWattage"}
+Number   DrivewayLightsWatts "Driveway Lights Watts [%.1f W]" (GDevices,GRoom2) {mios="unit:house,device:4/service/EnergyMetering1/Watts"}
+String   DrivewayLightsLog "Driveway Lights Log [%s]" (GDevices,GRoom2) {mios="unit:house,device:4/service/EnergyMetering1/Log"}
+Number   DrivewayLightsConsecutivePollFails "Driveway Lights Consecutive Poll Fails [%d]" (GDevices,GRoom2) {mios="unit:house,device:4/service/ZWaveNetwork1/ConsecutivePollFails"}
+DateTime DrivewayLightsLastPollSuccess "Driveway Lights Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:4/service/ZWaveNetwork1/LastPollSuccess"}
+Number   DrivewayLightsCommFailure "Driveway Lights Comms Failure [%d]" (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/CommFailure"}
+DateTime DrivewayLightsCommFailureTime "Driveway Lights Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/CommFailureTime"}
+Number   DrivewayLightsPollRatings "Driveway Lights Poll Ratings [%.4f]" (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/PollRatings"}
+String   DrivewayLightsCommFailureAlarm "Driveway Lights Comms Failure Alarm [%s]" (GDevices,GRoom2) {mios="unit:house,device:4/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - House Mode */
+Number   HouseModeId "ID [%d]" (GDevices) {mios="unit:house,device:30/id"}
+String   HouseModeDeviceStatus "House Mode Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:30/status"}
+String   HouseModeDebugMode "House Mode Debug Mode [%s]" (GDevices,GRoom6) {mios="unit:house,device:30/service/HouseModes1/DebugMode"}
+String   HouseModePOLLINGRATE "House Mode FIXME POLLING_RATE [%s]" (GDevices,GRoom6) {mios="unit:house,device:30/service/HouseModes1/POLLING_RATE"}
+String   HouseModeHMode "House Mode House Mode [%s]" (GDevices,GRoom6) {mios="unit:house,device:30/service/HouseModes1/HMode"}
+String   HouseModeMessage "House Mode Message [%s]" (GDevices,GRoom6) {mios="unit:house,device:30/service/HouseModes1/Message"}
+
+/* Device - MultiSwitch */
+Number   MultiSwitchId "ID [%d]" (GDevices) {mios="unit:house,device:31/id"}
+String   MultiSwitchDeviceStatus "MultiSwitch Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:31/status"}
+Switch   MultiSwitchStatus1 "MultiSwitch Status 1" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status1"}
+Switch   MultiSwitchStatus2 "MultiSwitch Status 2" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status2"}
+Switch   MultiSwitchStatus3 "MultiSwitch Status 3" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status3"}
+Switch   MultiSwitchStatus4 "MultiSwitch Status 4" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status4"}
+Switch   MultiSwitchStatus5 "MultiSwitch Status 5" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status5"}
+Switch   MultiSwitchStatus6 "MultiSwitch Status 6" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status6"}
+Switch   MultiSwitchStatus7 "MultiSwitch Status 7" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status7"}
+Switch   MultiSwitchStatus8 "MultiSwitch Status 8" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Status8"}
+String   MultiSwitchRadioBtns "MultiSwitch FIXME RadioBtns [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/RadioBtns"}
+String   MultiSwitchPulseBtns "MultiSwitch FIXME PulseBtns [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/PulseBtns"}
+String   MultiSwitchBtnNames "MultiSwitch FIXME BtnNames [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/BtnNames"}
+String   MultiSwitchText1 "MultiSwitch Text 1 [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Text1"}
+String   MultiSwitchText2 "MultiSwitch Text 2 [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Text2"}
+String   MultiSwitchOptions "MultiSwitch Options [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Options"}
+String   MultiSwitchMsg "MultiSwitch Message [%s]" (GDevices,GRoom6) {mios="unit:house,device:31/service/MSwitch1/Msg"}
+
+/* Device - Program Logic Core */
+Number   ProgramLogicCoreId "ID [%d]" (GDevices) {mios="unit:house,device:34/id"}
+String   ProgramLogicCoreDeviceStatus "Program Logic Core Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:34/status"}
+
+/* Device - House Occ */
+Number   HouseOccId "ID [%d]" (GDevices) {mios="unit:house,device:36/id"}
+String   HouseOccDeviceStatus "House Occ Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:36/status"}
+
+/* Device - House Unoccupied */
+Number   HouseUnoccupiedId "ID [%d]" (GDevices) {mios="unit:house,device:37/id"}
+String   HouseUnoccupiedDeviceStatus "House Unoccupied Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:37/status"}
+
+/* Device - Front Door Lock */
+Number   FrontDoorLockId "ID [%d]" (GDevices) {mios="unit:house,device:39/id"}
+String   FrontDoorLockDeviceStatus "Front Door Lock Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:39/status"}
+Number   FrontDoorLockMinPinSize "Front Door Lock Min Pin Size [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/MinPinSize"}
+Number   FrontDoorLockMaxPinSize "Front Door Lock Max Pin Size [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/MaxPinSize"}
+Number   FrontDoorLockConfigured "Front Door Lock Configured [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/Configured"}
+String   FrontDoorLockModeSetting "Front Door Lock Mode Setting [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/ModeSetting"}
+DateTime FrontDoorLockLastUpdate "Front Door Lock Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/LastUpdate"}
+DateTime FrontDoorLockFirstConfigured "Front Door Lock First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/FirstConfigured"}
+String   FrontDoorLockPinCodes "Front Door Lock PIN Codes [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/PinCodes"}
+String   FrontDoorLockNumSchedules "Front Door Lock Number of Schedules [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/NumSchedules"}
+Switch   FrontDoorLockStatus18 "Front Door Lock Status" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/Status"}
+DateTime FrontDoorLockBatteryDate "Front Door Lock Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/BatteryDate"}
+Number   FrontDoorLockBatteryLevel "Front Door Lock Battery Level [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/BatteryLevel"}
+String   FrontDoorLockKeepPinCodes "Front Door Lock Keep PIN Codes [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/KeepPinCodes"}
+DateTime FrontDoorLockLastTimeCheck "Front Door Lock Last Time Check [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/LastTimeCheck"}
+Number   FrontDoorLockLastTimeOffset "Front Door Lock Last Time Offset [%.4f]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/LastTimeOffset"}
+Number   FrontDoorLockslCodeChanged "Front Door Lock Code Changed [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_CodeChanged"}
+String   FrontDoorLockslPinProgramSuccess "Front Door Lock FIXME sl_PinProgramSuccess [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_PinProgramSuccess"}
+Number   FrontDoorLockslLockButton "Front Door Lock Lock Button [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_LockButton"}
+String   FrontDoorLockslUserCode "Front Door Lock User Code [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_UserCode"}
+Number   FrontDoorLockslUserCode_userid "Front Door Lock User Code (ID) [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_UserCode,in:REGEX(UserID=\"(.+)\" UserName=\".*\")"}
+String   FrontDoorLockslUserCode_username "Front Door Lock User Code (Name) [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_UserCode,in:REGEX(UserID=\".+\" UserName=\"(.*)\")"}
+String   FrontDoorLockTarget29 "Front Door Lock Target [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/Target"}
+Number   FrontDoorLockslLockChanged "Front Door Lock Lock Changed [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_LockChanged"}
+Switch   FrontDoorLockStatus "Front Door Lock Status" (GDevices,GRoom1) {mios="unit:house,device:39/service/SwitchPower1/Status"}
+Number   FrontDoorLockConsecutivePollFails "Front Door Lock Consecutive Poll Fails [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   FrontDoorLockCommFailure "Front Door Lock Comms Failure [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/CommFailure"}
+DateTime FrontDoorLockCommFailureTime "Front Door Lock Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/CommFailureTime"}
+DateTime FrontDoorLockLastPollSuccess "Front Door Lock Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:39/service/ZWaveNetwork1/LastPollSuccess"}
+Number   FrontDoorLockslPinFailed "Front Door Lock PIN Failed [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_PinFailed"}
+Number   FrontDoorLockPollRatings "Front Door Lock Poll Ratings [%.4f]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/PollRatings"}
+String   FrontDoorLockCommFailureAlarm "Front Door Lock Comms Failure Alarm [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/CommFailureAlarm"}
+Number   FrontDoorLockTarget "Front Door Lock Target [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/SwitchPower1/Target"}
+Number   FrontDoorLockslBatteryAlarm "Front Door Lock Battery Alarm [%d]" (GDevices,GRoom1) {mios="unit:house,device:39/service/HaDevice1/sl_BatteryAlarm"}
+String   FrontDoorLockslVeryLowBattery "Front Door Lock Very Low Battery [%s]" (GDevices,GRoom1) {mios="unit:house,device:39/service/DoorLock1/sl_VeryLowBattery"}
+
+/* Device - Back Porch Light */
+Number   BackPorchLightId "ID [%d]" (GDevices) {mios="unit:house,device:40/id"}
+String   BackPorchLightDeviceStatus "Back Porch Light Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:40/status"}
+Number   BackPorchLightConfigured "Back Porch Light Configured [%d]" (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/Configured"}
+String   BackPorchLightModeSetting "Back Porch Light Mode Setting [%s]" (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/ModeSetting"}
+DateTime BackPorchLightLastUpdate "Back Porch Light Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/LastUpdate"}
+DateTime BackPorchLightFirstConfigured "Back Porch Light First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/FirstConfigured"}
+Number   BackPorchLightTarget "Back Porch Light Target [%d]" (GDevices,GRoom5) {mios="unit:house,device:40/service/SwitchPower1/Target"}
+Switch   BackPorchLightStatus "Back Porch Light Status" (GDevices,GRoom5,OutsideLights) {mios="unit:house,device:40/service/SwitchPower1/Status"}
+Number   BackPorchLightConsecutivePollFails "Back Porch Light Consecutive Poll Fails [%d]" (GDevices,GRoom5) {mios="unit:house,device:40/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   BackPorchLightUserSuppliedWattage "Back Porch Light User Supplied Wattage [%.1f W]" (GDevices,GRoom5) {mios="unit:house,device:40/service/EnergyMetering1/UserSuppliedWattage"}
+Number   BackPorchLightWatts "Back Porch Light Watts [%.1f W]" (GDevices,GRoom5) {mios="unit:house,device:40/service/EnergyMetering1/Watts"}
+String   BackPorchLightLog "Back Porch Light Log [%s]" (GDevices,GRoom5) {mios="unit:house,device:40/service/EnergyMetering1/Log"}
+DateTime BackPorchLightLastPollSuccess "Back Porch Light Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:40/service/ZWaveNetwork1/LastPollSuccess"}
+Number   BackPorchLightCommFailure "Back Porch Light Comms Failure [%d]" (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/CommFailure"}
+DateTime BackPorchLightCommFailureTime "Back Porch Light Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/CommFailureTime"}
+Number   BackPorchLightPollRatings "Back Porch Light Poll Ratings [%.4f]" (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/PollRatings"}
+String   BackPorchLightCommFailureAlarm "Back Porch Light Comms Failure Alarm [%s]" (GDevices,GRoom5) {mios="unit:house,device:40/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Deck Lights */
+Number   DeckLightsId "ID [%d]" (GDevices) {mios="unit:house,device:41/id"}
+String   DeckLightsDeviceStatus "Deck Lights Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:41/status"}
+Number   DeckLightsConfigured "Deck Lights Configured [%d]" (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/Configured"}
+String   DeckLightsModeSetting "Deck Lights Mode Setting [%s]" (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/ModeSetting"}
+DateTime DeckLightsLastUpdate "Deck Lights Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/LastUpdate"}
+DateTime DeckLightsFirstConfigured "Deck Lights First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/FirstConfigured"}
+Number   DeckLightsTarget "Deck Lights Target [%d]" (GDevices,GRoom5) {mios="unit:house,device:41/service/SwitchPower1/Target"}
+Switch   DeckLightsStatus "Deck Lights Status" (GDevices,GRoom5,OutsideLights) {mios="unit:house,device:41/service/SwitchPower1/Status"}
+Number   DeckLightsConsecutivePollFails "Deck Lights Consecutive Poll Fails [%d]" (GDevices,GRoom5) {mios="unit:house,device:41/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   DeckLightsUserSuppliedWattage "Deck Lights User Supplied Wattage [%.1f W]" (GDevices,GRoom5) {mios="unit:house,device:41/service/EnergyMetering1/UserSuppliedWattage"}
+Number   DeckLightsWatts "Deck Lights Watts [%.1f W]" (GDevices,GRoom5) {mios="unit:house,device:41/service/EnergyMetering1/Watts"}
+String   DeckLightsLog "Deck Lights Log [%s]" (GDevices,GRoom5) {mios="unit:house,device:41/service/EnergyMetering1/Log"}
+DateTime DeckLightsLastPollSuccess "Deck Lights Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:41/service/ZWaveNetwork1/LastPollSuccess"}
+Number   DeckLightsCommFailure "Deck Lights Comms Failure [%d]" (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/CommFailure"}
+DateTime DeckLightsCommFailureTime "Deck Lights Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/CommFailureTime"}
+Number   DeckLightsPollRatings "Deck Lights Poll Ratings [%.4f]" (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/PollRatings"}
+String   DeckLightsCommFailureAlarm "Deck Lights Comms Failure Alarm [%s]" (GDevices,GRoom5) {mios="unit:house,device:41/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Garage Door Opener */
+Number   GarageDoorOpenerId "ID [%d]" (GDevices) {mios="unit:house,device:43/id"}
+String   GarageDoorOpenerDeviceStatus "Garage Door Opener Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:43/status"}
+Number   GarageDoorOpenerConfigured "Garage Door Opener Configured [%d]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/Configured"}
+Switch   GarageDoorOpenerStatus "Garage Door Opener Status" (GDevices,GRoom2) {mios="unit:house,device:43/service/SwitchPower1/Status"}
+String   GarageDoorOpenerModeSetting "Garage Door Opener Mode Setting [%s]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/ModeSetting"}
+DateTime GarageDoorOpenerLastUpdate "Garage Door Opener Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/LastUpdate"}
+DateTime GarageDoorOpenerFirstConfigured "Garage Door Opener First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/FirstConfigured"}
+String   GarageDoorOpenerslTamperAlarm "Garage Door Opener FIXME sl_TamperAlarm [%s]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/sl_TamperAlarm"}
+DateTime GarageDoorOpenerLastTamper "Garage Door Opener Last Tamper [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:43/service/SecuritySensor1/LastTamper"}
+String   GarageDoorOpenerIgnoreTripTime "Garage Door Opener Ignore Trip Time [%s]" (GDevices,GRoom2) {mios="unit:house,device:43/service/SecuritySensor1/IgnoreTripTime"}
+DateTime GarageDoorOpenerLastTrip "Garage Door Opener Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:43/service/SecuritySensor1/LastTrip"}
+Contact  GarageDoorOpenerTripped "Garage Door Opener Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom2) {mios="unit:house,device:43/service/SecuritySensor1/Tripped"}
+Number   GarageDoorOpenerCommFailure "Garage Door Opener Comms Failure [%d]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/CommFailure"}
+DateTime GarageDoorOpenerCommFailureTime "Garage Door Opener Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/CommFailureTime"}
+Number   GarageDoorOpenerConsecutivePollFails "Garage Door Opener Consecutive Poll Fails [%d]" (GDevices,GRoom2) {mios="unit:house,device:43/service/ZWaveNetwork1/ConsecutivePollFails"}
+DateTime GarageDoorOpenerLastPollSuccess "Garage Door Opener Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:43/service/ZWaveNetwork1/LastPollSuccess"}
+Number   GarageDoorOpenerTarget "Garage Door Opener Target [%d]" (GDevices,GRoom2) {mios="unit:house,device:43/service/SwitchPower1/Target"}
+String   GarageDoorOpenerslAlarm "Garage Door Opener FIXME sl_Alarm [%s]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/sl_Alarm"}
+Number   GarageDoorOpenerPollRatings "Garage Door Opener Poll Ratings [%.4f]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/PollRatings"}
+String   GarageDoorOpenerCommFailureAlarm "Garage Door Opener Comms Failure Alarm [%s]" (GDevices,GRoom2) {mios="unit:house,device:43/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Study Light */
+Number   StudyLightId "ID [%d]" (GDevices) {mios="unit:house,device:82/id"}
+String   StudyLightDeviceStatus "Study Light Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:82/status"}
+Number   StudyLightConfigured "Study Light Configured [%d]" (GDevices) {mios="unit:house,device:82/service/HaDevice1/Configured"}
+String   StudyLightModeSetting "Study Light Mode Setting [%s]" (GDevices) {mios="unit:house,device:82/service/HaDevice1/ModeSetting"}
+DateTime StudyLightLastUpdate "Study Light Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:82/service/HaDevice1/LastUpdate"}
+DateTime StudyLightFirstConfigured "Study Light First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:82/service/HaDevice1/FirstConfigured"}
+String   StudyLightDocumentation15 "Study Light Documentation [%s]" (GDevices) {mios="unit:house,device:82/service/HaDevice1/Documentation"}
+Number   StudyLightTarget "Study Light Target [%d]" (GDevices) {mios="unit:house,device:82/service/SwitchPower1/Target"}
+Switch   StudyLightStatus "Study Light Status" (GDevices,InsideLights) {mios="unit:house,device:82/service/SwitchPower1/Status"}
+Number   StudyLightWatts "Study Light Watts [%.1f W]" (GDevices) {mios="unit:house,device:82/service/EnergyMetering1/Watts"}
+String   StudyLightLog "Study Light Log [%s]" (GDevices) {mios="unit:house,device:82/service/EnergyMetering1/Log"}
+String   StudyLightActualUsage "Study Light Actual Usage [%s]" (GDevices) {mios="unit:house,device:82/service/EnergyMetering1/ActualUsage"}
+Number   StudyLightKWH "Study Light kWh [%.1f kWh]" (GDevices) {mios="unit:house,device:82/service/EnergyMetering1/KWH"}
+DateTime StudyLightKWHReading "Study Light kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:82/service/EnergyMetering1/KWHReading"}
+Number   StudyLightConsecutivePollFails "Study Light Consecutive Poll Fails [%d]" (GDevices) {mios="unit:house,device:82/service/ZWaveNetwork1/ConsecutivePollFails"}
+DateTime StudyLightLastPollSuccess "Study Light Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:82/service/ZWaveNetwork1/LastPollSuccess"}
+Number   StudyLightCurrentLevel "Study Light Current Level [%.4f]" (GDevices) {mios="unit:house,device:82/service/GenericSensor1/CurrentLevel"}
+Number   StudyLightPollRatings "Study Light Poll Ratings [%.4f]" (GDevices) {mios="unit:house,device:82/service/HaDevice1/PollRatings"}
+String   StudyLightChildrenSameRoom "Study Light Children Same Room [%s]" (GDevices) {mios="unit:house,device:82/service/HaDevice1/ChildrenSameRoom"}
+
+/* Device - World Weather */
+Number   WorldWeatherId "ID [%d]" (GDevices) {mios="unit:house,device:84/id"}
+String   WorldWeatherDeviceStatus "World Weather Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:84/status"}
+String   WorldWeatherLocation "World Weather Location [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Location"}
+String   WorldWeatherMetric "World Weather FIXME Metric [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Metric"}
+String   WorldWeatherProviderName "World Weather FIXME ProviderName [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/ProviderName"}
+String   WorldWeatherProviderURL "World Weather FIXME ProviderURL [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/ProviderURL"}
+String   WorldWeatherChildrenSameRoom "World Weather Children Same Room [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/HaDevice1/ChildrenSameRoom"}
+String   WorldWeatherLocationUsed "World Weather FIXME LocationUsed [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/LocationUsed"}
+String   WorldWeatherLocationUsedText "World Weather FIXME LocationUsedText [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/LocationUsedText"}
+String   WorldWeatherCondition "World Weather FIXME Condition [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Condition"}
+String   WorldWeatherConditionGroup "World Weather FIXME ConditionGroup [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/ConditionGroup"}
+String   WorldWeatherWindCondition "World Weather FIXME WindCondition [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/WindCondition"}
+String   WorldWeatherWindDirection "World Weather FIXME WindDirection [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/WindDirection"}
+Number   WorldWeatherWindDegrees "World Weather FIXME WindDegrees [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/WindDegrees"}
+String   WorldWeatherWindSpeed "World Weather FIXME WindSpeed [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/WindSpeed"}
+Number   WorldWeatherWindGust "World Weather FIXME WindGust [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/WindGust"}
+Number   WorldWeatherPressure "World Weather FIXME Pressure [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Pressure"}
+String   WorldWeatherPressureTrend "World Weather FIXME PressureTrend [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/PressureTrend"}
+Number   WorldWeatherDewPoint "World Weather FIXME DewPoint [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/DewPoint"}
+Number   WorldWeatherHeatIndex "World Weather FIXME HeatIndex [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/HeatIndex"}
+Number   WorldWeatherWindChill "World Weather FIXME WindChill [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/WindChill"}
+Number   WorldWeatherFeelsLike "World Weather FIXME FeelsLike [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/FeelsLike"}
+Number   WorldWeatherSolar "World Weather FIXME Solar [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Solar"}
+Number   WorldWeatherUV "World Weather FIXME UV [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/UV"}
+DateTime WorldWeatherLastUpdate23 "World Weather Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/LastUpdate"}
+Number   WorldWeatherForecast1HighTemperature "World Weather FIXME Forecast.1.HighTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.HighTemperature"}
+Number   WorldWeatherForecast1LowTemperature "World Weather FIXME Forecast.1.LowTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.LowTemperature"}
+String   WorldWeatherForecast1Condition "World Weather FIXME Forecast.1.Condition [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.Condition"}
+String   WorldWeatherForecast1ConditionGroup "World Weather FIXME Forecast.1.ConditionGroup [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.ConditionGroup"}
+Number   WorldWeatherForecast1MaxWindSpeed "World Weather FIXME Forecast.1.MaxWindSpeed [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.MaxWindSpeed"}
+String   WorldWeatherForecast1MaxWindDirection "World Weather FIXME Forecast.1.MaxWindDirection [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.MaxWindDirection"}
+Number   WorldWeatherForecast1MaxWindDegrees "World Weather FIXME Forecast.1.MaxWindDegrees [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.MaxWindDegrees"}
+Number   WorldWeatherForecast1POP "World Weather FIXME Forecast.1.POP [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.POP"}
+Number   WorldWeatherForecast1QPFDay "World Weather FIXME Forecast.1.QPFDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.QPFDay"}
+Number   WorldWeatherForecast1QPFNight "World Weather FIXME Forecast.1.QPFNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.QPFNight"}
+Number   WorldWeatherForecast1SnowDay "World Weather FIXME Forecast.1.SnowDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.SnowDay"}
+Number   WorldWeatherForecast1SnowNight "World Weather FIXME Forecast.1.SnowNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.1.SnowNight"}
+Number   WorldWeatherForecast2HighTemperature "World Weather FIXME Forecast.2.HighTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.HighTemperature"}
+Number   WorldWeatherForecast2LowTemperature "World Weather FIXME Forecast.2.LowTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.LowTemperature"}
+String   WorldWeatherForecast2Condition "World Weather FIXME Forecast.2.Condition [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.Condition"}
+String   WorldWeatherForecast2ConditionGroup "World Weather FIXME Forecast.2.ConditionGroup [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.ConditionGroup"}
+Number   WorldWeatherForecast2MaxWindSpeed "World Weather FIXME Forecast.2.MaxWindSpeed [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.MaxWindSpeed"}
+String   WorldWeatherForecast2MaxWindDirection "World Weather FIXME Forecast.2.MaxWindDirection [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.MaxWindDirection"}
+Number   WorldWeatherForecast2MaxWindDegrees "World Weather FIXME Forecast.2.MaxWindDegrees [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.MaxWindDegrees"}
+Number   WorldWeatherForecast2POP "World Weather FIXME Forecast.2.POP [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.POP"}
+Number   WorldWeatherForecast2QPFDay "World Weather FIXME Forecast.2.QPFDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.QPFDay"}
+Number   WorldWeatherForecast2QPFNight "World Weather FIXME Forecast.2.QPFNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.QPFNight"}
+Number   WorldWeatherForecast2SnowDay "World Weather FIXME Forecast.2.SnowDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.SnowDay"}
+Number   WorldWeatherForecast2SnowNight "World Weather FIXME Forecast.2.SnowNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.2.SnowNight"}
+Number   WorldWeatherForecast3HighTemperature "World Weather FIXME Forecast.3.HighTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.HighTemperature"}
+Number   WorldWeatherForecast3LowTemperature "World Weather FIXME Forecast.3.LowTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.LowTemperature"}
+String   WorldWeatherForecast3Condition "World Weather FIXME Forecast.3.Condition [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.Condition"}
+String   WorldWeatherForecast3ConditionGroup "World Weather FIXME Forecast.3.ConditionGroup [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.ConditionGroup"}
+Number   WorldWeatherForecast3MaxWindSpeed "World Weather FIXME Forecast.3.MaxWindSpeed [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.MaxWindSpeed"}
+String   WorldWeatherForecast3MaxWindDirection "World Weather FIXME Forecast.3.MaxWindDirection [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.MaxWindDirection"}
+Number   WorldWeatherForecast3MaxWindDegrees "World Weather FIXME Forecast.3.MaxWindDegrees [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.MaxWindDegrees"}
+Number   WorldWeatherForecast3POP "World Weather FIXME Forecast.3.POP [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.POP"}
+Number   WorldWeatherForecast3QPFDay "World Weather FIXME Forecast.3.QPFDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.QPFDay"}
+Number   WorldWeatherForecast3QPFNight "World Weather FIXME Forecast.3.QPFNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.QPFNight"}
+Number   WorldWeatherForecast3SnowDay "World Weather FIXME Forecast.3.SnowDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.SnowDay"}
+Number   WorldWeatherForecast3SnowNight "World Weather FIXME Forecast.3.SnowNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.3.SnowNight"}
+Number   WorldWeatherForecast0HighTemperature "World Weather FIXME Forecast.0.HighTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.HighTemperature"}
+Number   WorldWeatherForecast0LowTemperature "World Weather FIXME Forecast.0.LowTemperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.LowTemperature"}
+String   WorldWeatherForecast0Condition "World Weather FIXME Forecast.0.Condition [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.Condition"}
+String   WorldWeatherForecast0ConditionGroup "World Weather FIXME Forecast.0.ConditionGroup [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.ConditionGroup"}
+Number   WorldWeatherForecast0MaxWindSpeed "World Weather FIXME Forecast.0.MaxWindSpeed [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.MaxWindSpeed"}
+String   WorldWeatherForecast0MaxWindDirection "World Weather FIXME Forecast.0.MaxWindDirection [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.MaxWindDirection"}
+Number   WorldWeatherForecast0MaxWindDegrees "World Weather FIXME Forecast.0.MaxWindDegrees [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.MaxWindDegrees"}
+Number   WorldWeatherForecast0POP "World Weather FIXME Forecast.0.POP [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.POP"}
+Number   WorldWeatherForecast0QPFDay "World Weather FIXME Forecast.0.QPFDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.QPFDay"}
+Number   WorldWeatherForecast0QPFNight "World Weather FIXME Forecast.0.QPFNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.QPFNight"}
+Number   WorldWeatherForecast0SnowDay "World Weather FIXME Forecast.0.SnowDay [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.SnowDay"}
+Number   WorldWeatherForecast0SnowNight "World Weather FIXME Forecast.0.SnowNight [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecast.0.SnowNight"}
+Number   WorldWeatherForecasts "World Weather FIXME Forecasts [%d]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Forecasts"}
+Number   WorldWeatherAlerts "World Weather FIXME Alerts [%d]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alerts"}
+DateTime WorldWeatherLastUpdate "World Weather Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/HaDevice1/LastUpdate"}
+String   WorldWeatherAlert1Type "World Weather FIXME Alert.1.Type [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.Type"}
+String   WorldWeatherAlert1Description "World Weather FIXME Alert.1.Description [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.Description"}
+DateTime WorldWeatherAlert1StartDate "World Weather FIXME Alert.1.StartDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.StartDate"}
+DateTime WorldWeatherAlert1EndDate "World Weather FIXME Alert.1.EndDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.EndDate"}
+String   WorldWeatherAlert1Message "World Weather FIXME Alert.1.Message [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.Message"}
+String   WorldWeatherAlert1Phenomena "World Weather FIXME Alert.1.Phenomena [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.Phenomena"}
+String   WorldWeatherAlert1Significance "World Weather FIXME Alert.1.Significance [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.Significance"}
+String   WorldWeatherAlert1Attribution "World Weather FIXME Alert.1.Attribution [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.1.Attribution"}
+String   WorldWeatherAlert2Type "World Weather FIXME Alert.2.Type [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.Type"}
+String   WorldWeatherAlert2Description "World Weather FIXME Alert.2.Description [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.Description"}
+DateTime WorldWeatherAlert2StartDate "World Weather FIXME Alert.2.StartDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.StartDate"}
+DateTime WorldWeatherAlert2EndDate "World Weather FIXME Alert.2.EndDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.EndDate"}
+String   WorldWeatherAlert2Message "World Weather FIXME Alert.2.Message [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.Message"}
+String   WorldWeatherAlert2Phenomena "World Weather FIXME Alert.2.Phenomena [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.Phenomena"}
+String   WorldWeatherAlert2Significance "World Weather FIXME Alert.2.Significance [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.Significance"}
+String   WorldWeatherAlert2Attribution "World Weather FIXME Alert.2.Attribution [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.2.Attribution"}
+String   WorldWeatherPeriod "World Weather Period [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Period"}
+String   WorldWeatherAlert3Type "World Weather FIXME Alert.3.Type [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.Type"}
+String   WorldWeatherAlert3Description "World Weather FIXME Alert.3.Description [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.Description"}
+DateTime WorldWeatherAlert3StartDate "World Weather FIXME Alert.3.StartDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.StartDate"}
+DateTime WorldWeatherAlert3EndDate "World Weather FIXME Alert.3.EndDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.EndDate"}
+String   WorldWeatherAlert3Message "World Weather FIXME Alert.3.Message [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.Message"}
+String   WorldWeatherAlert3Phenomena "World Weather FIXME Alert.3.Phenomena [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.Phenomena"}
+String   WorldWeatherAlert3Significance "World Weather FIXME Alert.3.Significance [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.Significance"}
+String   WorldWeatherAlert3Attribution "World Weather FIXME Alert.3.Attribution [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.3.Attribution"}
+String   WorldWeatherAlert4Type "World Weather FIXME Alert.4.Type [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.Type"}
+String   WorldWeatherAlert4Description "World Weather FIXME Alert.4.Description [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.Description"}
+DateTime WorldWeatherAlert4StartDate "World Weather FIXME Alert.4.StartDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.StartDate"}
+DateTime WorldWeatherAlert4EndDate "World Weather FIXME Alert.4.EndDate [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.EndDate"}
+String   WorldWeatherAlert4Message "World Weather FIXME Alert.4.Message [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.Message"}
+String   WorldWeatherAlert4Phenomena "World Weather FIXME Alert.4.Phenomena [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.Phenomena"}
+String   WorldWeatherAlert4Significance "World Weather FIXME Alert.4.Significance [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.Significance"}
+String   WorldWeatherAlert4Attribution "World Weather FIXME Alert.4.Attribution [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.4.Attribution"}
+String   WorldWeatherAlert5Type "World Weather FIXME Alert.5.Type [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.Type"}
+String   WorldWeatherAlert5Description "World Weather FIXME Alert.5.Description [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.Description"}
+String   WorldWeatherAlert5StartDate "World Weather FIXME Alert.5.StartDate [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.StartDate"}
+String   WorldWeatherAlert5EndDate "World Weather FIXME Alert.5.EndDate [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.EndDate"}
+String   WorldWeatherAlert5Message "World Weather FIXME Alert.5.Message [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.Message"}
+String   WorldWeatherAlert5Phenomena "World Weather FIXME Alert.5.Phenomena [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.Phenomena"}
+String   WorldWeatherAlert5Significance "World Weather FIXME Alert.5.Significance [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.Significance"}
+String   WorldWeatherAlert5Attribution "World Weather FIXME Alert.5.Attribution [%s]" (GDevices,GRoom8) {mios="unit:house,device:84/service/Weather1/Alert.5.Attribution"}
+
+/* Device - Temp Outside */
+Number   TempOutsideId "ID [%d]" (GDevices) {mios="unit:house,device:85/id"}
+String   TempOutsideDeviceStatus "Temp Outside Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:85/status"}
+Number   TempOutsideCurrentTemperature "Temp Outside Current Temperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:85/service/TemperatureSensor1/CurrentTemperature"}
+
+/* Device - Forecast Low */
+Number   ForecastLowId "ID [%d]" (GDevices) {mios="unit:house,device:86/id"}
+String   ForecastLowDeviceStatus "Forecast Low Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:86/status"}
+Number   ForecastLowCurrentTemperature "Forecast Low Current Temperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:86/service/TemperatureSensor1/CurrentTemperature"}
+
+/* Device - Forecaset High */
+Number   ForecasetHighId "ID [%d]" (GDevices) {mios="unit:house,device:87/id"}
+String   ForecasetHighDeviceStatus "Forecaset High Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:87/status"}
+Number   ForecasetHighCurrentTemperature "Forecaset High Current Temperature [%.1f F]" (GDevices,GRoom8) {mios="unit:house,device:87/service/TemperatureSensor1/CurrentTemperature"}
+
+/* Device - Humidity Outside */
+Number   HumidityOutsideId "ID [%d]" (GDevices) {mios="unit:house,device:88/id"}
+String   HumidityOutsideDeviceStatus "Humidity Outside Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:88/status"}
+Number   HumidityOutsideCurrentLevel "Humidity Outside Current Level [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:88/service/HumiditySensor1/CurrentLevel"}
+
+/* Device - Kitchen Refrigerator */
+Number   KitchenRefrigeratorId "ID [%d]" (GDevices) {mios="unit:house,device:108/id"}
+String   KitchenRefrigeratorDeviceStatus "Kitchen Refrigerator Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:108/status"}
+Number   KitchenRefrigeratorConfigured "Kitchen Refrigerator Configured [%d]" (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/Configured"}
+String   KitchenRefrigeratorModeSetting "Kitchen Refrigerator Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/ModeSetting"}
+Number   KitchenRefrigeratorTarget "Kitchen Refrigerator Target [%d]" (GDevices,GRoom9) {mios="unit:house,device:108/service/SwitchPower1/Target"}
+Number   KitchenRefrigeratorCommFailure "Kitchen Refrigerator Comms Failure [%d]" (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/CommFailure"}
+DateTime KitchenRefrigeratorCommFailureTime "Kitchen Refrigerator Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/CommFailureTime"}
+DateTime KitchenRefrigeratorLastUpdate "Kitchen Refrigerator Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/LastUpdate"}
+DateTime KitchenRefrigeratorFirstConfigured "Kitchen Refrigerator First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/FirstConfigured"}
+Switch   KitchenRefrigeratorStatus "Kitchen Refrigerator Status" (GDevices,GRoom9) {mios="unit:house,device:108/service/SwitchPower1/Status"}
+Number   KitchenRefrigeratorWatts "Kitchen Refrigerator Watts [%.1f W]" (GDevices,GRoom9) {mios="unit:house,device:108/service/EnergyMetering1/Watts"}
+String   KitchenRefrigeratorLog "Kitchen Refrigerator Log [%s]" (GDevices,GRoom9) {mios="unit:house,device:108/service/EnergyMetering1/Log"}
+String   KitchenRefrigeratorActualUsage "Kitchen Refrigerator Actual Usage [%s]" (GDevices,GRoom9) {mios="unit:house,device:108/service/EnergyMetering1/ActualUsage"}
+String   KitchenRefrigeratorDocumentation23 "Kitchen Refrigerator Documentation [%s]" (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/Documentation"}
+Number   KitchenRefrigeratorKWH "Kitchen Refrigerator kWh [%.1f kWh]" (GDevices,GRoom9) {mios="unit:house,device:108/service/EnergyMetering1/KWH"}
+DateTime KitchenRefrigeratorKWHReading "Kitchen Refrigerator kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:108/service/EnergyMetering1/KWHReading"}
+Number   KitchenRefrigeratorConsecutivePollFails "Kitchen Refrigerator Consecutive Poll Fails [%d]" (GDevices,GRoom9) {mios="unit:house,device:108/service/ZWaveNetwork1/ConsecutivePollFails"}
+DateTime KitchenRefrigeratorLastPollSuccess "Kitchen Refrigerator Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:108/service/ZWaveNetwork1/LastPollSuccess"}
+Number   KitchenRefrigeratorCurrentLevel36 "Kitchen Refrigerator Current Level [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:108/service/GenericSensor1/CurrentLevel"}
+Number   KitchenRefrigeratorPollRatings "Kitchen Refrigerator Poll Ratings [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:108/service/HaDevice1/PollRatings"}
+String   KitchenRefrigeratorSupportedColors "Kitchen Refrigerator FIXME SupportedColors [%s]" (GDevices,GRoom9) {mios="unit:house,device:108/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+Number   KitchenRefrigeratorCurrentLevel39 "Kitchen Refrigerator Current Level [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:108/service/HumiditySensor1/CurrentLevel"}
+
+/* Device - Fridge Door */
+Number   FridgeDoorId "ID [%d]" (GDevices) {mios="unit:house,device:109/id"}
+String   FridgeDoorDeviceStatus "Fridge Door Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:109/status"}
+Number   FridgeDoorConfigured "Fridge Door Configured [%d]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/Configured"}
+String   FridgeDoorModeSetting "Fridge Door Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/ModeSetting"}
+Switch   FridgeDoorArmed "Fridge Door Armed" (GDevices,GRoom9) {mios="unit:house,device:109/service/SecuritySensor1/Armed"}
+DateTime FridgeDoorLastUpdate "Fridge Door Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/LastUpdate"}
+DateTime FridgeDoorFirstConfigured "Fridge Door First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/FirstConfigured"}
+String   FridgeDoorslTamperAlarm "Fridge Door FIXME sl_TamperAlarm [%s]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/sl_TamperAlarm"}
+DateTime FridgeDoorLastTamper "Fridge Door Last Tamper [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:109/service/SecuritySensor1/LastTamper"}
+String   FridgeDoorslAlarm "Fridge Door FIXME sl_Alarm [%s]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/sl_Alarm"}
+DateTime FridgeDoorBatteryDate "Fridge Door Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/BatteryDate"}
+Number   FridgeDoorBatteryLevel "Fridge Door Battery Level [%d]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/BatteryLevel"}
+Number   FridgeDoorConsecutivePollFails "Fridge Door Consecutive Poll Fails [%d]" (GDevices,GRoom9) {mios="unit:house,device:109/service/ZWaveNetwork1/ConsecutivePollFails"}
+String   FridgeDoorIgnoreTripTime "Fridge Door Ignore Trip Time [%s]" (GDevices,GRoom9) {mios="unit:house,device:109/service/SecuritySensor1/IgnoreTripTime"}
+DateTime FridgeDoorLastTrip "Fridge Door Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:109/service/SecuritySensor1/LastTrip"}
+Contact  FridgeDoorTripped "Fridge Door Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom9) {mios="unit:house,device:109/service/SecuritySensor1/Tripped"}
+String   FridgeDoorArmedTripped "Fridge Door Armed/Tripped [%s]" (GDevices,GRoom9) {mios="unit:house,device:109/service/SecuritySensor1/ArmedTripped"}
+DateTime FridgeDoorLastPollSuccess "Fridge Door Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:109/service/ZWaveNetwork1/LastPollSuccess"}
+Switch   FridgeDoorStatus "Fridge Door Status" (GDevices,GRoom9) {mios="unit:house,device:109/service/SwitchPower1/Status"}
+Number   FridgeDoorPollRatings "Fridge Door Poll Ratings [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/PollRatings"}
+Number   FridgeDoorWakeupRatings "Fridge Door Wakeup Ratings [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:109/service/HaDevice1/WakeupRatings"}
+
+/* Device - Siren */
+Number   SirenId "ID [%d]" (GDevices) {mios="unit:house,device:111/id"}
+String   SirenDeviceStatus "Siren Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:111/status"}
+String   SirenDocumentation9 "Siren Documentation [%s]" (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/Documentation"}
+Number   SirenConfigured "Siren Configured [%d]" (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/Configured"}
+String   SirenModeSetting "Siren Mode Setting [%s]" (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/ModeSetting"}
+Switch   SirenArmed "Siren Armed" (GDevices,GRoom6) {mios="unit:house,device:111/service/SecuritySensor1/Armed"}
+Number   SirenCommFailure "Siren Comms Failure [%d]" (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/CommFailure"}
+DateTime SirenCommFailureTime "Siren Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/CommFailureTime"}
+Number   SirenTarget "Siren Target [%d]" (GDevices,GRoom6) {mios="unit:house,device:111/service/SwitchPower1/Target"}
+Switch   SirenStatus "Siren Status" (GDevices,GRoom6) {mios="unit:house,device:111/service/SwitchPower1/Status"}
+Number   SirenConsecutivePollFails "Siren Consecutive Poll Fails [%d]" (GDevices,GRoom6) {mios="unit:house,device:111/service/ZWaveNetwork1/ConsecutivePollFails"}
+String   SirenAutoConfigure "Siren FIXME AutoConfigure [%s]" (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/AutoConfigure"}
+DateTime SirenLastUpdate "Siren Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom6) {mios="unit:house,device:111/service/HaDevice1/LastUpdate"}
+DateTime SirenLastPollSuccess "Siren Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom6) {mios="unit:house,device:111/service/ZWaveNetwork1/LastPollSuccess"}
+
+/* Device - Kitch Fridge Open */
+Number   KitchFridgeOpenId "ID [%d]" (GDevices) {mios="unit:house,device:113/id"}
+String   KitchFridgeOpenDeviceStatus "Kitch Fridge Open Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:113/status"}
+Number   KitchFridgeOpenCommFailure "Kitch Fridge Open Comms Failure [%d]" (GDevices,GRoom9) {mios="unit:house,device:113/service/HaDevice1/CommFailure"}
+DateTime KitchFridgeOpenCommFailureTime "Kitch Fridge Open Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:113/service/HaDevice1/CommFailureTime"}
+
+/* Device - Back Door Lock */
+Number   BackDoorLockId "ID [%d]" (GDevices) {mios="unit:house,device:125/id"}
+String   BackDoorLockDeviceStatus "Back Door Lock Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:125/status"}
+Number   BackDoorLockMinPinSize "Back Door Lock Min Pin Size [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/MinPinSize"}
+Number   BackDoorLockMaxPinSize "Back Door Lock Max Pin Size [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/MaxPinSize"}
+Number   BackDoorLockslPinFailed "Back Door Lock PIN Failed [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_PinFailed"}
+String   BackDoorLockModeSetting "Back Door Lock Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/ModeSetting"}
+DateTime BackDoorLockLastUpdate "Back Door Lock Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/LastUpdate"}
+DateTime BackDoorLockFirstConfigured "Back Door Lock First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/FirstConfigured"}
+String   BackDoorLockPinCodes "Back Door Lock PIN Codes [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/PinCodes"}
+String   BackDoorLockNumSchedules "Back Door Lock Number of Schedules [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/NumSchedules"}
+Switch   BackDoorLockStatus18 "Back Door Lock Status" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/Status"}
+DateTime BackDoorLockBatteryDate "Back Door Lock Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/BatteryDate"}
+Number   BackDoorLockBatteryLevel "Back Door Lock Battery Level [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/BatteryLevel"}
+Number   BackDoorLockConsecutivePollFails "Back Door Lock Consecutive Poll Fails [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/ZWaveNetwork1/ConsecutivePollFails"}
+String   BackDoorLockKeepPinCodes "Back Door Lock Keep PIN Codes [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/KeepPinCodes"}
+String   BackDoorLockTarget25 "Back Door Lock Target [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/Target"}
+Number   BackDoorLockslLockFailure "Back Door Lock Lock Failure [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_LockFailure"}
+DateTime BackDoorLockLastTimeCheck "Back Door Lock Last Time Check [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/LastTimeCheck"}
+Number   BackDoorLockLastTimeOffset "Back Door Lock Last Time Offset [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/LastTimeOffset"}
+String   BackDoorLockLastProgram "Back Door Lock FIXME LastProgram [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/LastProgram"}
+String   BackDoorLockslPinProgramSuccess "Back Door Lock FIXME sl_PinProgramSuccess [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_PinProgramSuccess"}
+Number   BackDoorLockslLockButton "Back Door Lock Lock Button [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_LockButton"}
+String   BackDoorLockslUserCode "Back Door Lock User Code [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_UserCode"}
+Number   BackDoorLockslUserCode_userid "Back Door Lock User Code (ID) [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_UserCode,in:REGEX(UserID=\"(.+)\" UserName=\".*\")"}
+String   BackDoorLockslUserCode_username "Back Door Lock User Code (Name) [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_UserCode,in:REGEX(UserID=\".+\" UserName=\"(.*)\")"}
+Number   BackDoorLockCommFailure "Back Door Lock Comms Failure [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/CommFailure"}
+DateTime BackDoorLockCommFailureTime "Back Door Lock Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/CommFailureTime"}
+Number   BackDoorLockConfigured "Back Door Lock Configured [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/Configured"}
+DateTime BackDoorLockLastPollSuccess "Back Door Lock Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:125/service/ZWaveNetwork1/LastPollSuccess"}
+Number   BackDoorLockslLowBattery "Back Door Lock Low Battery [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/DoorLock1/sl_LowBattery"}
+Number   BackDoorLockTarget "Back Door Lock Target [%d]" (GDevices,GRoom9) {mios="unit:house,device:125/service/SwitchPower1/Target"}
+Switch   BackDoorLockStatus "Back Door Lock Status" (GDevices,GRoom9) {mios="unit:house,device:125/service/SwitchPower1/Status"}
+Number   BackDoorLockPollRatings "Back Door Lock Poll Ratings [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/PollRatings"}
+String   BackDoorLockCommFailureAlarm "Back Door Lock Comms Failure Alarm [%s]" (GDevices,GRoom9) {mios="unit:house,device:125/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Attic Switch */
+Number   AtticSwitchId "ID [%d]" (GDevices) {mios="unit:house,device:137/id"}
+String   AtticSwitchDeviceStatus "Attic Switch Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:137/status"}
+String   AtticSwitchDocumentation4 "Attic Switch Documentation [%s]" (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/Documentation"}
+Number   AtticSwitchConfigured "Attic Switch Configured [%d]" (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/Configured"}
+String   AtticSwitchModeSetting "Attic Switch Mode Setting [%s]" (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/ModeSetting"}
+DateTime AtticSwitchLastUpdate "Attic Switch Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/LastUpdate"}
+DateTime AtticSwitchFirstConfigured "Attic Switch First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/FirstConfigured"}
+Number   AtticSwitchCurrentLevel "Attic Switch Current Level [%.4f]" (GDevices,GRoom13) {mios="unit:house,device:137/service/GenericSensor1/CurrentLevel"}
+Number   AtticSwitchKWH "Attic Switch kWh [%.1f kWh]" (GDevices,GRoom13) {mios="unit:house,device:137/service/EnergyMetering1/KWH"}
+DateTime AtticSwitchKWHReading "Attic Switch kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:137/service/EnergyMetering1/KWHReading"}
+Number   AtticSwitchTarget "Attic Switch Target [%d]" (GDevices,GRoom13) {mios="unit:house,device:137/service/SwitchPower1/Target"}
+Switch   AtticSwitchStatus "Attic Switch Status" (GDevices,GRoom13) {mios="unit:house,device:137/service/SwitchPower1/Status"}
+Number   AtticSwitchWatts "Attic Switch Watts [%.1f W]" (GDevices,GRoom13) {mios="unit:house,device:137/service/EnergyMetering1/Watts"}
+String   AtticSwitchLog "Attic Switch Log [%s]" (GDevices,GRoom13) {mios="unit:house,device:137/service/EnergyMetering1/Log"}
+String   AtticSwitchActualUsage "Attic Switch Actual Usage [%s]" (GDevices,GRoom13) {mios="unit:house,device:137/service/EnergyMetering1/ActualUsage"}
+Number   AtticSwitchConsecutivePollFails "Attic Switch Consecutive Poll Fails [%d]" (GDevices,GRoom13) {mios="unit:house,device:137/service/ZWaveNetwork1/ConsecutivePollFails"}
+DateTime AtticSwitchLastPollSuccess "Attic Switch Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:137/service/ZWaveNetwork1/LastPollSuccess"}
+Number   AtticSwitchCommFailure "Attic Switch Comms Failure [%d]" (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/CommFailure"}
+DateTime AtticSwitchCommFailureTime "Attic Switch Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/CommFailureTime"}
+String   AtticSwitchSupportedColors "Attic Switch FIXME SupportedColors [%s]" (GDevices,GRoom13) {mios="unit:house,device:137/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+Number   AtticSwitchPollRatings "Attic Switch Poll Ratings [%.4f]" (GDevices,GRoom13) {mios="unit:house,device:137/service/HaDevice1/PollRatings"}
+String   AtticSwitchIgnoreTripTime "Attic Switch Ignore Trip Time [%s]" (GDevices,GRoom13) {mios="unit:house,device:137/service/SecuritySensor1/IgnoreTripTime"}
+
+/* Device - Front Hall Light */
+Number   FrontHallLightId "ID [%d]" (GDevices) {mios="unit:house,device:139/id"}
+String   FrontHallLightDeviceStatus "Front Hall Light Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:139/status"}
+Number   FrontHallLightConfigured "Front Hall Light Configured [%d]" (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/Configured"}
+String   FrontHallLightModeSetting "Front Hall Light Mode Setting [%s]" (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/ModeSetting"}
+DateTime FrontHallLightLastUpdate "Front Hall Light Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/LastUpdate"}
+DateTime FrontHallLightFirstConfigured "Front Hall Light First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/FirstConfigured"}
+Switch   FrontHallLightStatus "Front Hall Light Status" (GDevices,GRoom1,InsideLights) {mios="unit:house,device:139/service/SwitchPower1/Status"}
+Number   FrontHallLightConsecutivePollFails "Front Hall Light Consecutive Poll Fails [%d]" (GDevices,GRoom1) {mios="unit:house,device:139/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   FrontHallLightTarget "Front Hall Light Target [%d]" (GDevices,GRoom1) {mios="unit:house,device:139/service/SwitchPower1/Target"}
+Number   FrontHallLightUserSuppliedWattage "Front Hall Light User Supplied Wattage [%.1f W]" (GDevices,GRoom1) {mios="unit:house,device:139/service/EnergyMetering1/UserSuppliedWattage"}
+Number   FrontHallLightWatts "Front Hall Light Watts [%.1f W]" (GDevices,GRoom1) {mios="unit:house,device:139/service/EnergyMetering1/Watts"}
+String   FrontHallLightLog "Front Hall Light Log [%s]" (GDevices,GRoom1) {mios="unit:house,device:139/service/EnergyMetering1/Log"}
+DateTime FrontHallLightLastPollSuccess "Front Hall Light Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:139/service/ZWaveNetwork1/LastPollSuccess"}
+Number   FrontHallLightCommFailure "Front Hall Light Comms Failure [%d]" (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/CommFailure"}
+DateTime FrontHallLightCommFailureTime "Front Hall Light Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/CommFailureTime"}
+Number   FrontHallLightPollRatings "Front Hall Light Poll Ratings [%.4f]" (GDevices,GRoom1) {mios="unit:house,device:139/service/HaDevice1/PollRatings"}
+
+/* Device - VeraAlerts */
+Number   VeraAlertsId "ID [%d]" (GDevices) {mios="unit:house,device:142/id"}
+String   VeraAlertsDeviceStatus "VeraAlerts Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:142/status"}
+String   VeraAlertsProcessNotifications "VeraAlerts Process Notifications [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/ProcessNotifications"}
+String   VeraAlertsInternalAlerts "VeraAlerts Internal Alerts [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/InternalAlerts"}
+String   VeraAlertsDebug "VeraAlerts Debug [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/Debug"}
+String   VeraAlertsProfiles "VeraAlerts FIXME Profiles [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/Profiles"}
+String   VeraAlertsUserProfileAssociation "VeraAlerts User Profile Association [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/UserProfileAssociation"}
+String   VeraAlertsRegisterID "VeraAlerts FIXME RegisterID [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/RegisterID"}
+String   VeraAlertsLastRecipient "VeraAlerts Last Recipient [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/LastRecipient"}
+String   VeraAlertsLastMsgSent "VeraAlerts Last Message Sent [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/LastMsgSent"}
+DateTime VeraAlertsLastUpdate "VeraAlerts Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/LastUpdate"}
+String   VeraAlertsRegisterMsg "VeraAlerts FIXME RegisterMsg [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/RegisterMsg"}
+String   VeraAlertsMsgOverride "VeraAlerts FIXME MsgOverride [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/MsgOverride"}
+String   VeraAlertsMsgHouseModes "VeraAlerts FIXME MsgHouseModes [%s]" (GDevices,GRoom13) {mios="unit:house,device:142/service/VeraAlert1/MsgHouseModes"}
+
+/* Device - HEM Main */
+Number   HEMMainId "ID [%d]" (GDevices) {mios="unit:house,device:145/id"}
+String   HEMMainDeviceStatus "HEM Main Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:145/status"}
+String   HEMMainDocumentation4 "HEM Main Documentation [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/Documentation"}
+Number   HEMMainConfigured "HEM Main Configured [%d]" (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/Configured"}
+DateTime HEMMainLastUpdate "HEM Main Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/LastUpdate"}
+DateTime HEMMainFirstConfigured "HEM Main First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/FirstConfigured"}
+Number   HEMMainKWH "HEM Main kWh [%.1f kWh]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/KWH"}
+DateTime HEMMainKWHReading "HEM Main kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/KWHReading"}
+Number   HEMMainWatts "HEM Main Watts [%.1f W]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/Watts"}
+String   HEMMainLog "HEM Main Log [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/Log"}
+String   HEMMainActualUsage "HEM Main Actual Usage [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/ActualUsage"}
+DateTime HEMMainLastPollSuccess "HEM Main Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:145/service/ZWaveNetwork1/LastPollSuccess"}
+String   HEMMainChildrenSameRoom "HEM Main Children Same Room [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/ChildrenSameRoom"}
+Number   HEMMainCommFailure "HEM Main Comms Failure [%d]" (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/CommFailure"}
+DateTime HEMMainCommFailureTime "HEM Main Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/CommFailureTime"}
+Number   HEMMainCurrentLevel "HEM Main Current Level [%.4f]" (GDevices,GRoom2) {mios="unit:house,device:145/service/GenericSensor1/CurrentLevel"}
+String   HEMMainSupportedColors "HEM Main FIXME SupportedColors [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+Number   HEMMainConsecutivePollFails "HEM Main Consecutive Poll Fails [%d]" (GDevices,GRoom2) {mios="unit:house,device:145/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   HEMMainPollRatings "HEM Main Poll Ratings [%.4f]" (GDevices,GRoom2) {mios="unit:house,device:145/service/HaDevice1/PollRatings"}
+String   HEMMainAmps "HEM Main FIXME Amps [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/Amps"}
+String   HEMMainVolts "HEM Main FIXME Volts [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/Volts"}
+Switch   HEMMainStatus "HEM Main Status" (GDevices,GRoom2) {mios="unit:house,device:145/service/SwitchPower1/Status"}
+String   HEMMainPowerFactor "HEM Main FIXME PowerFactor [%s]" (GDevices,GRoom2) {mios="unit:house,device:145/service/EnergyMetering1/PowerFactor"}
+
+/* Device - HEM Clamp 1 */
+Number   HEMClamp1Id "ID [%d]" (GDevices) {mios="unit:house,device:149/id"}
+String   HEMClamp1DeviceStatus "HEM Clamp 1 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:149/status"}
+Number   HEMClamp1Watts "HEM Clamp 1 Watts [%.1f W]" (GDevices,GRoom2) {mios="unit:house,device:149/service/EnergyMetering1/Watts"}
+String   HEMClamp1Log "HEM Clamp 1 Log [%s]" (GDevices,GRoom2) {mios="unit:house,device:149/service/EnergyMetering1/Log"}
+String   HEMClamp1ActualUsage "HEM Clamp 1 Actual Usage [%s]" (GDevices,GRoom2) {mios="unit:house,device:149/service/EnergyMetering1/ActualUsage"}
+Number   HEMClamp1KWH "HEM Clamp 1 kWh [%.1f kWh]" (GDevices,GRoom2) {mios="unit:house,device:149/service/EnergyMetering1/KWH"}
+DateTime HEMClamp1KWHReading "HEM Clamp 1 kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:149/service/EnergyMetering1/KWHReading"}
+Number   HEMClamp1CurrentLevel "HEM Clamp 1 Current Level [%.4f]" (GDevices,GRoom2) {mios="unit:house,device:149/service/GenericSensor1/CurrentLevel"}
+DateTime HEMClamp1LastUpdate "HEM Clamp 1 Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:149/service/HaDevice1/LastUpdate"}
+String   HEMClamp1SupportedColors "HEM Clamp 1 FIXME SupportedColors [%s]" (GDevices,GRoom2) {mios="unit:house,device:149/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+
+/* Device - HEM Clamp 2 */
+Number   HEMClamp2Id "ID [%d]" (GDevices) {mios="unit:house,device:150/id"}
+String   HEMClamp2DeviceStatus "HEM Clamp 2 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:150/status"}
+Number   HEMClamp2Watts "HEM Clamp 2 Watts [%.1f W]" (GDevices,GRoom2) {mios="unit:house,device:150/service/EnergyMetering1/Watts"}
+String   HEMClamp2Log "HEM Clamp 2 Log [%s]" (GDevices,GRoom2) {mios="unit:house,device:150/service/EnergyMetering1/Log"}
+String   HEMClamp2ActualUsage "HEM Clamp 2 Actual Usage [%s]" (GDevices,GRoom2) {mios="unit:house,device:150/service/EnergyMetering1/ActualUsage"}
+Number   HEMClamp2KWH "HEM Clamp 2 kWh [%.1f kWh]" (GDevices,GRoom2) {mios="unit:house,device:150/service/EnergyMetering1/KWH"}
+DateTime HEMClamp2KWHReading "HEM Clamp 2 kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:150/service/EnergyMetering1/KWHReading"}
+Number   HEMClamp2CurrentLevel "HEM Clamp 2 Current Level [%.4f]" (GDevices,GRoom2) {mios="unit:house,device:150/service/GenericSensor1/CurrentLevel"}
+String   HEMClamp2SupportedColors "HEM Clamp 2 FIXME SupportedColors [%s]" (GDevices,GRoom2) {mios="unit:house,device:150/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+DateTime HEMClamp2LastUpdate "HEM Clamp 2 Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom2) {mios="unit:house,device:150/service/HaDevice1/LastUpdate"}
+
+/* Device - DSC Alarm Panel */
+Number   DSCAlarmPanelId "ID [%d]" (GDevices) {mios="unit:house,device:154/id"}
+String   DSCAlarmPanelDeviceStatus "DSC Alarm Panel Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:154/status"}
+String   DSCAlarmPanelInterfaceType "DSC Alarm Panel FIXME InterfaceType [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/InterfaceType"}
+String   DSCAlarmPanelActivePartitions "DSC Alarm Panel FIXME ActivePartitions [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/ActivePartitions"}
+String   DSCAlarmPanelDoorZones "DSC Alarm Panel FIXME DoorZones [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/DoorZones"}
+String   DSCAlarmPanelMotionZones "DSC Alarm Panel FIXME MotionZones [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/MotionZones"}
+String   DSCAlarmPanelSmokeZones "DSC Alarm Panel FIXME SmokeZones [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/SmokeZones"}
+String   DSCAlarmPanelEnableRemoteArm "DSC Alarm Panel FIXME EnableRemoteArm [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/EnableRemoteArm"}
+String   DSCAlarmPanelEnableRemotePanic "DSC Alarm Panel FIXME EnableRemotePanic [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/EnableRemotePanic"}
+String   DSCAlarmPanelEnableManualLabels "DSC Alarm Panel FIXME EnableManualLabels [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/EnableManualLabels"}
+String   DSCAlarmPanelVendorStatusData "DSC Alarm Panel Vendor Status Data [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/VendorStatusData"}
+String   DSCAlarmPanelVendorStatusCode "DSC Alarm Panel Vendor Status Code [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/VendorStatusCode"}
+String   DSCAlarmPanelVendorStatus "DSC Alarm Panel Vendor Status [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/VendorStatus"}
+String   DSCAlarmPanelTimeBroadcast "DSC Alarm Panel FIXME TimeBroadcast [%s]" (GDevices,GRoom6) {mios="unit:house,device:154/service/urn:micasaverde-com:serviceId:DSCAlarmPanel1/TimeBroadcast"}
+Number   DSCAlarmPanelCommFailure "DSC Alarm Panel Comms Failure [%d]" (GDevices,GRoom6) {mios="unit:house,device:154/service/HaDevice1/CommFailure"}
+DateTime DSCAlarmPanelCommFailureTime "DSC Alarm Panel Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom6) {mios="unit:house,device:154/service/HaDevice1/CommFailureTime"}
+
+/* Device - Front/Garage Door */
+Number   FrontGarageDoorId "ID [%d]" (GDevices) {mios="unit:house,device:155/id"}
+String   FrontGarageDoorDeviceStatus "Front/Garage Door Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:155/status"}
+Switch   FrontGarageDoorArmed "Front/Garage Door Armed" (GDevices,GRoom1) {mios="unit:house,device:155/service/SecuritySensor1/Armed"}
+String   FrontGarageDoorModeSetting "Front/Garage Door Mode Setting [%s]" (GDevices,GRoom1) {mios="unit:house,device:155/service/HaDevice1/ModeSetting"}
+String   FrontGarageDoorIgnoreTripTime "Front/Garage Door Ignore Trip Time [%s]" (GDevices,GRoom1) {mios="unit:house,device:155/service/SecuritySensor1/IgnoreTripTime"}
+DateTime FrontGarageDoorLastUpdate "Front/Garage Door Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:155/service/HaDevice1/LastUpdate"}
+DateTime FrontGarageDoorLastTrip "Front/Garage Door Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:155/service/SecuritySensor1/LastTrip"}
+Contact  FrontGarageDoorTripped "Front/Garage Door Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom1) {mios="unit:house,device:155/service/SecuritySensor1/Tripped"}
+String   FrontGarageDoorArmedTripped "Front/Garage Door Armed/Tripped [%s]" (GDevices,GRoom1) {mios="unit:house,device:155/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Back Door */
+Number   BackDoorId "ID [%d]" (GDevices) {mios="unit:house,device:156/id"}
+String   BackDoorDeviceStatus "Back Door Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:156/status"}
+Switch   BackDoorArmed "Back Door Armed" (GDevices,GRoom9) {mios="unit:house,device:156/service/SecuritySensor1/Armed"}
+String   BackDoorModeSetting "Back Door Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:156/service/HaDevice1/ModeSetting"}
+String   BackDoorIgnoreTripTime "Back Door Ignore Trip Time [%s]" (GDevices,GRoom9) {mios="unit:house,device:156/service/SecuritySensor1/IgnoreTripTime"}
+DateTime BackDoorLastUpdate "Back Door Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:156/service/HaDevice1/LastUpdate"}
+DateTime BackDoorLastTrip "Back Door Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:156/service/SecuritySensor1/LastTrip"}
+Contact  BackDoorTripped "Back Door Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom9) {mios="unit:house,device:156/service/SecuritySensor1/Tripped"}
+String   BackDoorArmedTripped "Back Door Armed/Tripped [%s]" (GDevices,GRoom9) {mios="unit:house,device:156/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Kitchen/Fam Motion */
+Number   KitchenFamMotionId "ID [%d]" (GDevices) {mios="unit:house,device:160/id"}
+String   KitchenFamMotionDeviceStatus "Kitchen/Fam Motion Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:160/status"}
+Switch   KitchenFamMotionArmed "Kitchen/Fam Motion Armed" (GDevices,GRoom9) {mios="unit:house,device:160/service/SecuritySensor1/Armed"}
+String   KitchenFamMotionModeSetting "Kitchen/Fam Motion Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:160/service/HaDevice1/ModeSetting"}
+String   KitchenFamMotionIgnoreTripTime "Kitchen/Fam Motion Ignore Trip Time [%s]" (GDevices,GRoom9) {mios="unit:house,device:160/service/SecuritySensor1/IgnoreTripTime"}
+DateTime KitchenFamMotionLastTrip "Kitchen/Fam Motion Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:160/service/SecuritySensor1/LastTrip"}
+Contact  KitchenFamMotionTripped "Kitchen/Fam Motion Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom9) {mios="unit:house,device:160/service/SecuritySensor1/Tripped"}
+DateTime KitchenFamMotionLastUpdate "Kitchen/Fam Motion Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:160/service/HaDevice1/LastUpdate"}
+String   KitchenFamMotionArmedTripped "Kitchen/Fam Motion Armed/Tripped [%s]" (GDevices,GRoom9) {mios="unit:house,device:160/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Buck Creek DSC */
+Number   BuckCreekDSCId "ID [%d]" (GDevices) {mios="unit:house,device:161/id"}
+String   BuckCreekDSCDeviceStatus "Buck Creek DSC Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:161/status"}
+String   BuckCreekDSCVendorStatusData "Buck Creek DSC Vendor Status Data [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/VendorStatusData"}
+String   BuckCreekDSCVendorStatusCode "Buck Creek DSC Vendor Status Code [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/VendorStatusCode"}
+String   BuckCreekDSCVendorStatus "Buck Creek DSC Vendor Status [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/VendorStatus"}
+String   BuckCreekDSCAlarm "Buck Creek DSC Alarm [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/Alarm"}
+String   BuckCreekDSCAlarmMemory "Buck Creek DSC Alarm Memory [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/AlarmMemory"}
+DateTime BuckCreekDSCLastAlarmActive "Buck Creek DSC Last Alarm Active [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/LastAlarmActive"}
+String   BuckCreekDSCArmMode "Buck Creek DSC Arm Mode [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/ArmMode"}
+String   BuckCreekDSCDetailedArmMode "Arm Mode [%s]" (GDevices,GRoom6,DSC) {mios="unit:house,device:161/service/AlarmPartition2/DetailedArmMode"}
+String   BuckCreekDSCArmModeNum "Buck Creek DSC FIXME ArmModeNum [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/urn:micasaverde-com:serviceId:DSCAlarmPartition1/ArmModeNum"}
+String   BuckCreekDSCLastUser "Buck Creek DSC Last User [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/AlarmPartition2/LastUser"}
+String   BuckCreekDSCModeSetting "Buck Creek DSC Mode Setting [%s]" (GDevices,GRoom6) {mios="unit:house,device:161/service/HaDevice1/ModeSetting"}
+
+/* Device - Upstairs Windows 1 */
+Number   UpstairsWindows1Id "ID [%d]" (GDevices) {mios="unit:house,device:162/id"}
+String   UpstairsWindows1DeviceStatus "Upstairs Windows 1 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:162/status"}
+Switch   UpstairsWindows1Armed "Upstairs Windows 1 Armed" (GDevices,GRoom11) {mios="unit:house,device:162/service/SecuritySensor1/Armed"}
+String   UpstairsWindows1ModeSetting "Upstairs Windows 1 Mode Setting [%s]" (GDevices,GRoom11) {mios="unit:house,device:162/service/HaDevice1/ModeSetting"}
+String   UpstairsWindows1IgnoreTripTime "Upstairs Windows 1 Ignore Trip Time [%s]" (GDevices,GRoom11) {mios="unit:house,device:162/service/SecuritySensor1/IgnoreTripTime"}
+DateTime UpstairsWindows1LastUpdate "Upstairs Windows 1 Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:162/service/HaDevice1/LastUpdate"}
+DateTime UpstairsWindows1LastTrip "Upstairs Windows 1 Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:162/service/SecuritySensor1/LastTrip"}
+Contact  UpstairsWindows1Tripped "Upstairs Windows 1 Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom11) {mios="unit:house,device:162/service/SecuritySensor1/Tripped"}
+String   UpstairsWindows1ArmedTripped "Upstairs Windows 1 Armed/Tripped [%s]" (GDevices,GRoom11) {mios="unit:house,device:162/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Kitchen/Dine Window 1 */
+Number   KitchenDineWindow1Id "ID [%d]" (GDevices) {mios="unit:house,device:163/id"}
+String   KitchenDineWindow1DeviceStatus "Kitchen/Dine Window 1 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:163/status"}
+Switch   KitchenDineWindow1Armed "Kitchen/Dine Window 1 Armed" (GDevices,GRoom9) {mios="unit:house,device:163/service/SecuritySensor1/Armed"}
+String   KitchenDineWindow1ModeSetting "Kitchen/Dine Window 1 Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:163/service/HaDevice1/ModeSetting"}
+String   KitchenDineWindow1IgnoreTripTime "Kitchen/Dine Window 1 Ignore Trip Time [%s]" (GDevices,GRoom9) {mios="unit:house,device:163/service/SecuritySensor1/IgnoreTripTime"}
+DateTime KitchenDineWindow1LastUpdate "Kitchen/Dine Window 1 Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:163/service/HaDevice1/LastUpdate"}
+DateTime KitchenDineWindow1LastTrip "Kitchen/Dine Window 1 Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:163/service/SecuritySensor1/LastTrip"}
+Contact  KitchenDineWindow1Tripped "Kitchen/Dine Window 1 Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom9) {mios="unit:house,device:163/service/SecuritySensor1/Tripped"}
+String   KitchenDineWindow1ArmedTripped "Kitchen/Dine Window 1 Armed/Tripped [%s]" (GDevices,GRoom9) {mios="unit:house,device:163/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Living Room WIndow 1 */
+Number   LivingRoomWIndow1Id "ID [%d]" (GDevices) {mios="unit:house,device:164/id"}
+String   LivingRoomWIndow1DeviceStatus "Living Room WIndow 1 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:164/status"}
+Switch   LivingRoomWIndow1Armed "Living Room WIndow 1 Armed" (GDevices,GRoom3) {mios="unit:house,device:164/service/SecuritySensor1/Armed"}
+String   LivingRoomWIndow1ModeSetting "Living Room WIndow 1 Mode Setting [%s]" (GDevices,GRoom3) {mios="unit:house,device:164/service/HaDevice1/ModeSetting"}
+String   LivingRoomWIndow1IgnoreTripTime "Living Room WIndow 1 Ignore Trip Time [%s]" (GDevices,GRoom3) {mios="unit:house,device:164/service/SecuritySensor1/IgnoreTripTime"}
+DateTime LivingRoomWIndow1LastUpdate "Living Room WIndow 1 Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom3) {mios="unit:house,device:164/service/HaDevice1/LastUpdate"}
+DateTime LivingRoomWIndow1LastTrip "Living Room WIndow 1 Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom3) {mios="unit:house,device:164/service/SecuritySensor1/LastTrip"}
+Contact  LivingRoomWIndow1Tripped "Living Room WIndow 1 Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom3) {mios="unit:house,device:164/service/SecuritySensor1/Tripped"}
+String   LivingRoomWIndow1ArmedTripped "Living Room WIndow 1 Armed/Tripped [%s]" (GDevices,GRoom3) {mios="unit:house,device:164/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Master Windows */
+Number   MasterWindowsId "ID [%d]" (GDevices) {mios="unit:house,device:165/id"}
+String   MasterWindowsDeviceStatus "Master Windows Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:165/status"}
+Switch   MasterWindowsArmed "Master Windows Armed" (GDevices,GRoom12) {mios="unit:house,device:165/service/SecuritySensor1/Armed"}
+String   MasterWindowsModeSetting "Master Windows Mode Setting [%s]" (GDevices,GRoom12) {mios="unit:house,device:165/service/HaDevice1/ModeSetting"}
+String   MasterWindowsIgnoreTripTime "Master Windows Ignore Trip Time [%s]" (GDevices,GRoom12) {mios="unit:house,device:165/service/SecuritySensor1/IgnoreTripTime"}
+DateTime MasterWindowsLastUpdate "Master Windows Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom12) {mios="unit:house,device:165/service/HaDevice1/LastUpdate"}
+DateTime MasterWindowsLastTrip "Master Windows Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom12) {mios="unit:house,device:165/service/SecuritySensor1/LastTrip"}
+Contact  MasterWindowsTripped "Master Windows Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom12) {mios="unit:house,device:165/service/SecuritySensor1/Tripped"}
+String   MasterWindowsArmedTripped "Master Windows Armed/Tripped [%s]" (GDevices,GRoom12) {mios="unit:house,device:165/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Study Windows */
+Number   StudyWindowsId "ID [%d]" (GDevices) {mios="unit:house,device:166/id"}
+String   StudyWindowsDeviceStatus "Study Windows Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:166/status"}
+Switch   StudyWindowsArmed "Study Windows Armed" (GDevices,GRoom10) {mios="unit:house,device:166/service/SecuritySensor1/Armed"}
+String   StudyWindowsModeSetting "Study Windows Mode Setting [%s]" (GDevices,GRoom10) {mios="unit:house,device:166/service/HaDevice1/ModeSetting"}
+String   StudyWindowsIgnoreTripTime "Study Windows Ignore Trip Time [%s]" (GDevices,GRoom10) {mios="unit:house,device:166/service/SecuritySensor1/IgnoreTripTime"}
+DateTime StudyWindowsLastUpdate "Study Windows Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom10) {mios="unit:house,device:166/service/HaDevice1/LastUpdate"}
+DateTime StudyWindowsLastTrip "Study Windows Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom10) {mios="unit:house,device:166/service/SecuritySensor1/LastTrip"}
+Contact  StudyWindowsTripped "Study Windows Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom10) {mios="unit:house,device:166/service/SecuritySensor1/Tripped"}
+String   StudyWindowsArmedTripped "Study Windows Armed/Tripped [%s]" (GDevices,GRoom10) {mios="unit:house,device:166/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Upstairs Motion DSC */
+Number   UpstairsMotionDSCId "ID [%d]" (GDevices) {mios="unit:house,device:171/id"}
+String   UpstairsMotionDSCDeviceStatus "Upstairs Motion DSC Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:171/status"}
+Switch   UpstairsMotionDSCArmed "Upstairs Motion DSC Armed" (GDevices,GRoom11) {mios="unit:house,device:171/service/SecuritySensor1/Armed"}
+String   UpstairsMotionDSCModeSetting "Upstairs Motion DSC Mode Setting [%s]" (GDevices,GRoom11) {mios="unit:house,device:171/service/HaDevice1/ModeSetting"}
+String   UpstairsMotionDSCIgnoreTripTime "Upstairs Motion DSC Ignore Trip Time [%s]" (GDevices,GRoom11) {mios="unit:house,device:171/service/SecuritySensor1/IgnoreTripTime"}
+DateTime UpstairsMotionDSCLastTrip "Upstairs Motion DSC Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:171/service/SecuritySensor1/LastTrip"}
+Contact  UpstairsMotionDSCTripped "Upstairs Motion DSC Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom11) {mios="unit:house,device:171/service/SecuritySensor1/Tripped"}
+DateTime UpstairsMotionDSCLastUpdate "Upstairs Motion DSC Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:171/service/HaDevice1/LastUpdate"}
+String   UpstairsMotionDSCArmedTripped "Upstairs Motion DSC Armed/Tripped [%s]" (GDevices,GRoom11) {mios="unit:house,device:171/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Front Hall Motion */
+Number   FrontHallMotionId "ID [%d]" (GDevices) {mios="unit:house,device:172/id"}
+String   FrontHallMotionDeviceStatus "Front Hall Motion Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:172/status"}
+Switch   FrontHallMotionArmed "Front Hall Motion Armed" (GDevices,GRoom1) {mios="unit:house,device:172/service/SecuritySensor1/Armed"}
+String   FrontHallMotionModeSetting "Front Hall Motion Mode Setting [%s]" (GDevices,GRoom1) {mios="unit:house,device:172/service/HaDevice1/ModeSetting"}
+String   FrontHallMotionIgnoreTripTime "Front Hall Motion Ignore Trip Time [%s]" (GDevices,GRoom1) {mios="unit:house,device:172/service/SecuritySensor1/IgnoreTripTime"}
+DateTime FrontHallMotionLastTrip "Front Hall Motion Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:172/service/SecuritySensor1/LastTrip"}
+Contact  FrontHallMotionTripped "Front Hall Motion Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom1) {mios="unit:house,device:172/service/SecuritySensor1/Tripped"}
+DateTime FrontHallMotionLastUpdate "Front Hall Motion Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom1) {mios="unit:house,device:172/service/HaDevice1/LastUpdate"}
+String   FrontHallMotionArmedTripped "Front Hall Motion Armed/Tripped [%s]" (GDevices,GRoom1) {mios="unit:house,device:172/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Roku Ping PwrCheck */
+Number   RokuPingPwrCheckId "ID [%d]" (GDevices) {mios="unit:house,device:176/id"}
+String   RokuPingPwrCheckDeviceStatus "Roku Ping PwrCheck Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:176/status"}
+String   RokuPingPwrCheckUI7Check "Roku Ping PwrCheck FIXME UI7Check [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/PingSensor1/UI7Check"}
+Number   RokuPingPwrCheckPeriod "Roku Ping PwrCheck Period [%d]" (GDevices,GRoom12) {mios="unit:house,device:176/service/PingSensor1/Period"}
+String   RokuPingPwrCheckAddress "Roku Ping PwrCheck Address [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/PingSensor1/Address"}
+String   RokuPingPwrCheckInvert "Roku Ping PwrCheck Invert [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/PingSensor1/Invert"}
+Number   RokuPingPwrCheckTarget "Roku Ping PwrCheck Target [%d]" (GDevices,GRoom12) {mios="unit:house,device:176/service/SwitchPower1/Target"}
+Switch   RokuPingPwrCheckStatus "Roku Ping PwrCheck Status" (GDevices,GRoom12) {mios="unit:house,device:176/service/SwitchPower1/Status"}
+String   RokuPingPwrCheckAllowedFailure "Roku Ping PwrCheck FIXME AllowedFailure [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/PingSensor1/AllowedFailure"}
+DateTime RokuPingPwrCheckLastUpdate "Roku Ping PwrCheck Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom12) {mios="unit:house,device:176/service/HaDevice1/LastUpdate"}
+Number   RokuPingPwrCheckConfigured "Roku Ping PwrCheck Configured [%d]" (GDevices,GRoom12) {mios="unit:house,device:176/service/HaDevice1/Configured"}
+String   RokuPingPwrCheckCurrentFailureCount "Roku Ping PwrCheck FIXME CurrentFailureCount [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/PingSensor1/CurrentFailureCount"}
+String   RokuPingPwrCheckIgnoreTripTime "Roku Ping PwrCheck Ignore Trip Time [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/SecuritySensor1/IgnoreTripTime"}
+DateTime RokuPingPwrCheckLastTrip "Roku Ping PwrCheck Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom12) {mios="unit:house,device:176/service/SecuritySensor1/LastTrip"}
+Contact  RokuPingPwrCheckTripped "Roku Ping PwrCheck Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom12) {mios="unit:house,device:176/service/SecuritySensor1/Tripped"}
+Switch   RokuPingPwrCheckArmed "Roku Ping PwrCheck Armed" (GDevices,GRoom12) {mios="unit:house,device:176/service/SecuritySensor1/Armed"}
+String   RokuPingPwrCheckArmedTripped "Roku Ping PwrCheck Armed/Tripped [%s]" (GDevices,GRoom12) {mios="unit:house,device:176/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Kitchen Island */
+Number   KitchenIslandId "ID [%d]" (GDevices) {mios="unit:house,device:178/id"}
+String   KitchenIslandDeviceStatus "Kitchen Island Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:178/status"}
+Number   KitchenIslandConfigured "Kitchen Island Configured [%d]" (GDevices,GRoom9) {mios="unit:house,device:178/service/HaDevice1/Configured"}
+String   KitchenIslandModeSetting "Kitchen Island Mode Setting [%s]" (GDevices,GRoom9) {mios="unit:house,device:178/service/HaDevice1/ModeSetting"}
+DateTime KitchenIslandLastUpdate "Kitchen Island Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:178/service/HaDevice1/LastUpdate"}
+DateTime KitchenIslandFirstConfigured "Kitchen Island First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:178/service/HaDevice1/FirstConfigured"}
+Switch   KitchenIslandStatus "Kitchen Island Status" (GDevices,GRoom9,InsideLights) {mios="unit:house,device:178/service/SwitchPower1/Status"}
+DateTime KitchenIslandLastPollSuccess "Kitchen Island Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom9) {mios="unit:house,device:178/service/ZWaveNetwork1/LastPollSuccess"}
+Number   KitchenIslandTarget "Kitchen Island Target [%d]" (GDevices,GRoom9) {mios="unit:house,device:178/service/SwitchPower1/Target"}
+Number   KitchenIslandConsecutivePollFails "Kitchen Island Consecutive Poll Fails [%d]" (GDevices,GRoom9) {mios="unit:house,device:178/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   KitchenIslandPollRatings "Kitchen Island Poll Ratings [%.4f]" (GDevices,GRoom9) {mios="unit:house,device:178/service/HaDevice1/PollRatings"}
+
+/* Device - _Generic IO */
+Number   GenericIOId "ID [%d]" (GDevices) {mios="unit:house,device:181/id"}
+String   GenericIODeviceStatus "_Generic IO Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:181/status"}
+
+/* Device - ALTUI */
+Number   ALTUIId "ID [%d]" (GDevices) {mios="unit:house,device:183/id"}
+String   ALTUIDeviceStatus "ALTUI Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:183/status"}
+String   ALTUIUI7Check "ALTUI FIXME UI7Check [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/UI7Check"}
+String   ALTUIDebug "ALTUI Debug [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Debug"}
+String   ALTUIVersion "ALTUI Version [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Version"}
+String   ALTUIPresent "ALTUI FIXME Present [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Present"}
+String   ALTUIRemoteAccess "ALTUI FIXME RemoteAccess [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/RemoteAccess"}
+String   ALTUILocalHome "ALTUI FIXME LocalHome [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/LocalHome"}
+String   ALTUIThemeCSS "ALTUI FIXME ThemeCSS [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/ThemeCSS"}
+String   ALTUIExtraController "ALTUI FIXME ExtraController [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/ExtraController"}
+String   ALTUIServerOptions "ALTUI FIXME ServerOptions [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/ServerOptions"}
+String   ALTUILocalCDN "ALTUI FIXME LocalCDN [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/LocalCDN"}
+String   ALTUILocalBootstrap "ALTUI FIXME LocalBootstrap [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/LocalBootstrap"}
+String   ALTUIEnableWorkflows "ALTUI FIXME EnableWorkflows [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/EnableWorkflows"}
+String   ALTUIWorkflowsActiveState "ALTUI FIXME WorkflowsActiveState [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/WorkflowsActiveState"}
+String   ALTUIWorkflowsVariableBag "ALTUI FIXME WorkflowsVariableBag [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/WorkflowsVariableBag"}
+String   ALTUITimers "ALTUI FIXME Timers [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Timers"}
+String   ALTUIPluginConfig "ALTUI FIXME PluginConfig [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/PluginConfig"}
+String   ALTUIDataStorageProviders "ALTUI FIXME DataStorageProviders [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/DataStorageProviders"}
+String   ALTUIVariablesToWatch "ALTUI FIXME VariablesToWatch [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/VariablesToWatch"}
+String   ALTUIVariablesToSend "ALTUI FIXME VariablesToSend [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/VariablesToSend"}
+String   ALTUIRemoteVariablesToWatch "ALTUI FIXME RemoteVariablesToWatch [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/RemoteVariablesToWatch"}
+String   ALTUIFavIcon "ALTUI FIXME FavIcon [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/FavIcon"}
+String   ALTUIDatapage10 "ALTUI FIXME Data_page1_0 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_page1_0"}
+String   ALTUIDataCustomPages0 "ALTUI FIXME Data_CustomPages_0 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_CustomPages_0"}
+String   ALTUIDatapage11 "ALTUI FIXME Data_page1_1 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_page1_1"}
+String   ALTUIDatapage12 "ALTUI FIXME Data_page1_2 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_page1_2"}
+String   ALTUIDatapage13 "ALTUI FIXME Data_page1_3 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_page1_3"}
+String   ALTUIDataFavorites0 "ALTUI FIXME Data_Favorites_0 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_Favorites_0"}
+String   ALTUIDataFavorites1 "ALTUI FIXME Data_Favorites_1 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_Favorites_1"}
+String   ALTUIDataFavorites2 "ALTUI FIXME Data_Favorites_2 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_Favorites_2"}
+String   ALTUIDataFavorites3 "ALTUI FIXME Data_Favorites_3 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_Favorites_3"}
+String   ALTUIDataFavorites4 "ALTUI FIXME Data_Favorites_4 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_Favorites_4"}
+String   ALTUIData10 "ALTUI FIXME Data_1_0 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_0"}
+String   ALTUIData11 "ALTUI FIXME Data_1_1 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_1"}
+String   ALTUIData12 "ALTUI FIXME Data_1_2 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_2"}
+String   ALTUIData13 "ALTUI FIXME Data_1_3 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_3"}
+String   ALTUIData14 "ALTUI FIXME Data_1_4 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_4"}
+String   ALTUIData15 "ALTUI FIXME Data_1_5 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_5"}
+String   ALTUIGoogleLastError "ALTUI FIXME GoogleLastError [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/GoogleLastError"}
+String   ALTUISWVersion "ALTUI FIXME SWVersion [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/SWVersion"}
+String   ALTUIData16 "ALTUI FIXME Data_1_6 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Data_1_6"}
+String   ALTUICtrlOptions "ALTUI FIXME CtrlOptions [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/CtrlOptions"}
+String   ALTUIWflowWorkflows0 "ALTUI FIXME Wflow_Workflows_0 [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/Wflow_Workflows_0"}
+String   ALTUIImagePath "ALTUI FIXME ImagePath [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/ImagePath"}
+String   ALTUIBackgroundImg "ALTUI FIXME BackgroundImg [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/BackgroundImg"}
+String   ALTUIVoiceRSSKEY "ALTUI FIXME VoiceRSS_KEY [%s]" (GDevices) {mios="unit:house,device:183/service/urn:upnp-org:serviceId:altui1/VoiceRSS_KEY"}
+
+/* Device - Play Room Light */
+Number   PlayRoomLightId "ID [%d]" (GDevices) {mios="unit:house,device:190/id"}
+String   PlayRoomLightDeviceStatus "Play Room Light Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:190/status"}
+Number   PlayRoomLightConfigured "Play Room Light Configured [%d]" (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/Configured"}
+String   PlayRoomLightModeSetting "Play Room Light Mode Setting [%s]" (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/ModeSetting"}
+DateTime PlayRoomLightLastUpdate "Play Room Light Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/LastUpdate"}
+DateTime PlayRoomLightFirstConfigured "Play Room Light First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/FirstConfigured"}
+Switch   PlayRoomLightStatus "Play Room Light Status" (GDevices,GRoom11,InsideLights) {mios="unit:house,device:190/service/SwitchPower1/Status"}
+DateTime PlayRoomLightLastPollSuccess "Play Room Light Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:190/service/ZWaveNetwork1/LastPollSuccess"}
+Number   PlayRoomLightConsecutivePollFails "Play Room Light Consecutive Poll Fails [%d]" (GDevices,GRoom11) {mios="unit:house,device:190/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   PlayRoomLightTarget "Play Room Light Target [%d]" (GDevices,GRoom11) {mios="unit:house,device:190/service/SwitchPower1/Target"}
+Number   PlayRoomLightCommFailure "Play Room Light Comms Failure [%d]" (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/CommFailure"}
+DateTime PlayRoomLightCommFailureTime "Play Room Light Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/CommFailureTime"}
+Number   PlayRoomLightPollRatings "Play Room Light Poll Ratings [%.4f]" (GDevices,GRoom11) {mios="unit:house,device:190/service/HaDevice1/PollRatings"}
+
+/* Device - Nest */
+Number   NestId "ID [%d]" (GDevices) {mios="unit:house,device:193/id"}
+String   NestDeviceStatus "Nest Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:193/status"}
+String   NestLogging "Nest Logging [%s]" (GDevices,GRoom6) {mios="unit:house,device:193/service/urn:watou-com:serviceId:Nest1/Logging"}
+String   NestTemperatureScale "Nest FIXME TemperatureScale [%s]" (GDevices,GRoom6) {mios="unit:house,device:193/service/urn:watou-com:serviceId:Nest1/TemperatureScale"}
+String   Nestperiod "Nest FIXME period [%s]" (GDevices,GRoom6) {mios="unit:house,device:193/service/urn:watou-com:serviceId:Nest1/period"}
+String   Nesttransporturl "Nest FIXME transport_url [%s]" (GDevices,GRoom6) {mios="unit:house,device:193/service/urn:watou-com:serviceId:Nest1/transport_url"}
+String   Neststatus "Nest FIXME status [%s]" (GDevices,GRoom6) {mios="unit:house,device:193/service/urn:watou-com:serviceId:Nest1/status"}
+
+/* Device - Buck Creek */
+Number   BuckCreekId "ID [%d]" (GDevices) {mios="unit:house,device:194/id"}
+String   BuckCreekDeviceStatus "Buck Creek Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:194/status"}
+String   BuckCreekOccupancyState "Buck Creek Occupancy State [%s]" (GDevices) {mios="unit:house,device:194/service/HouseStatus1/OccupancyState"}
+String   BuckCreekStreetAddress "Buck Creek Street Address [%s]" (GDevices) {mios="unit:house,device:194/service/NestStructure1/StreetAddress"}
+String   BuckCreekLocation "Buck Creek Location [%s]" (GDevices) {mios="unit:house,device:194/service/NestStructure1/Location"}
+String   BuckCreekPostalCode "Buck Creek Postal Code [%s]" (GDevices) {mios="unit:house,device:194/service/NestStructure1/PostalCode"}
+String   BuckCreekCountryCode "Buck Creek Country Code [%s]" (GDevices) {mios="unit:house,device:194/service/NestStructure1/CountryCode"}
+DateTime BuckCreekLastUpdate "Buck Creek Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:194/service/HaDevice1/LastUpdate"}
+Switch   BuckCreekStatus "Buck Creek Status" (GDevices) {mios="unit:house,device:194/service/SwitchPower1/Status"}
+String   BuckCreekModeSetting "Buck Creek Mode Setting [%s]" (GDevices) {mios="unit:house,device:194/service/HaDevice1/ModeSetting"}
+
+/* Device - Downstairs */
+Number   DownstairsId "ID [%d]" (GDevices) {mios="unit:house,device:195/id"}
+String   DownstairsDeviceStatus "Downstairs Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:195/status"}
+Number   DownstairsCurrentTemperature "DS Temp [%.1f F]" (GDevices,DownstairsTemps) {mios="unit:house,device:195/service/TemperatureSensor1/CurrentTemperature"}
+Number   DownstairsCurrentSetpointHeat "DS Heat Setpoint [%.1f F]" (GDevices,DownstairsTemps) {mios="unit:house,device:195/service/TemperatureSetpoint1_Heat/CurrentSetpoint"}
+Number   DownstairsCurrentSetpointCool "DS Cool Setpoint [%.1f F]" (GDevices,DownstairsTemps) {mios="unit:house,device:195/service/TemperatureSetpoint1_Cool/CurrentSetpoint"}
+String   DownstairsMode "Downstairs Mode [%s]" (GDevices,DownstairsTemps) {mios="unit:house,device:195/service/HVAC_FanOperatingMode1/Mode"}
+String   DownstairsFanStatus "Downstairs Fan Status [%s]" (GDevices) {mios="unit:house,device:195/service/HVAC_FanOperatingMode1/FanStatus"}
+String   DownstairsModeStatus "Downstairs Mode Status [%s]" (GDevices) {mios="unit:house,device:195/service/HVAC_UserOperatingMode1/ModeStatus"}
+String   DownstairsModeState "Downstairs Mode State [%s]" (GDevices) {mios="unit:house,device:195/service/HVAC_OperatingState1/ModeState"}
+String   DownstairsCommands "Downstairs Commands [%s]" (GDevices) {mios="unit:house,device:195/service/HaDevice1/Commands"}
+Number   DownstairsBatteryLevel "Downstairs Battery Level [%d]" (GDevices) {mios="unit:house,device:195/service/HaDevice1/BatteryLevel"}
+DateTime DownstairsBatteryDate "Downstairs Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:195/service/HaDevice1/BatteryDate"}
+DateTime DownstairsLastUpdate "Downstairs Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:195/service/HaDevice1/LastUpdate"}
+Number   DownstairsUserSuppliedWattage "Downstairs User Supplied Wattage [%.1f W]" (GDevices) {mios="unit:house,device:195/service/EnergyMetering1/UserSuppliedWattage"}
+String   DownstairsModeSetting "Downstairs Mode Setting [%s]" (GDevices) {mios="unit:house,device:195/service/HaDevice1/ModeSetting"}
+String   DownstairsModeTarget "Downstairs Mode Target [%s]" (GDevices) {mios="unit:house,device:195/service/HVAC_UserOperatingMode1/ModeTarget"}
+
+/* Device - Upstairs */
+Number   UpstairsId "ID [%d]" (GDevices) {mios="unit:house,device:196/id"}
+String   UpstairsDeviceStatus "Upstairs Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices,UpstairsTemps) {mios="unit:house,device:196/status"}
+Number   UpstairsCurrentTemperature "US Temp [%.1f F]" (GDevices,UpstairsTemps) {mios="unit:house,device:196/service/TemperatureSensor1/CurrentTemperature"}
+Number   UpstairsCurrentSetpointHeat "US Setpoint Heat [%.1f F]" (GDevices,UpstairsTemps) {mios="unit:house,device:196/service/TemperatureSetpoint1_Heat/CurrentSetpoint"}
+Number   UpstairsCurrentSetpointCool "US Setpoint Cool [%.1f F]" (GDevices,UpstairsTemps) {mios="unit:house,device:196/service/TemperatureSetpoint1_Cool/CurrentSetpoint"}
+String   UpstairsMode "Upstairs Mode [%s]" (GDevices,UpstairsTemps) {mios="unit:house,device:196/service/HVAC_FanOperatingMode1/Mode"}
+String   UpstairsFanStatus "Upstairs Fan Status [%s]" (GDevices) {mios="unit:house,device:196/service/HVAC_FanOperatingMode1/FanStatus"}
+String   UpstairsModeStatus "Upstairs Mode Status [%s]" (GDevices) {mios="unit:house,device:196/service/HVAC_UserOperatingMode1/ModeStatus"}
+String   UpstairsModeState "Upstairs Mode State [%s]" (GDevices) {mios="unit:house,device:196/service/HVAC_OperatingState1/ModeState"}
+String   UpstairsCommands "Upstairs Commands [%s]" (GDevices) {mios="unit:house,device:196/service/HaDevice1/Commands"}
+Number   UpstairsBatteryLevel "Upstairs Battery Level [%d]" (GDevices) {mios="unit:house,device:196/service/HaDevice1/BatteryLevel"}
+DateTime UpstairsBatteryDate "Upstairs Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:196/service/HaDevice1/BatteryDate"}
+DateTime UpstairsLastUpdate "Upstairs Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:196/service/HaDevice1/LastUpdate"}
+Number   UpstairsUserSuppliedWattage "Upstairs User Supplied Wattage [%.1f W]" (GDevices) {mios="unit:house,device:196/service/EnergyMetering1/UserSuppliedWattage"}
+String   UpstairsModeSetting "Upstairs Mode Setting [%s]" (GDevices) {mios="unit:house,device:196/service/HaDevice1/ModeSetting"}
+String   UpstairsModeTarget "Upstairs Mode Target [%s]" (GDevices) {mios="unit:house,device:196/service/HVAC_UserOperatingMode1/ModeTarget"}
+
+/* Device - Downstairs Humidity */
+Number   DownstairsHumidityId "ID [%d]" (GDevices) {mios="unit:house,device:197/id"}
+String   DownstairsHumidityDeviceStatus "Downstairs Humidity Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:197/status"}
+Number   DownstairsHumidityCurrentLevel "Downstairs Humidity Current Level [%.4f]" (GDevices) {mios="unit:house,device:197/service/HumiditySensor1/CurrentLevel"}
+DateTime DownstairsHumidityLastUpdate "Downstairs Humidity Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:197/service/HaDevice1/LastUpdate"}
+
+/* Device - Upstairs Humidity */
+Number   UpstairsHumidityId "ID [%d]" (GDevices) {mios="unit:house,device:198/id"}
+String   UpstairsHumidityDeviceStatus "Upstairs Humidity Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:198/status"}
+Number   UpstairsHumidityCurrentLevel "Upstairs Humidity Current Level [%.4f]" (GDevices) {mios="unit:house,device:198/service/HumiditySensor1/CurrentLevel"}
+DateTime UpstairsHumidityLastUpdate "Upstairs Humidity Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:198/service/HaDevice1/LastUpdate"}
+
+/* Device - Living Room Smoke */
+Number   LivingRoomSmokeId "ID [%d]" (GDevices) {mios="unit:house,device:199/id"}
+String   LivingRoomSmokeDeviceStatus "Living Room Smoke Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:199/status"}
+String   LivingRoomSmokeIgnoreTripTime "Living Room Smoke Ignore Trip Time [%s]" (GDevices) {mios="unit:house,device:199/service/SecuritySensor1/IgnoreTripTime"}
+DateTime LivingRoomSmokeLastTrip "Living Room Smoke Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:199/service/SecuritySensor1/LastTrip"}
+Switch   LivingRoomSmokeArmed "Living Room Smoke Armed" (GDevices) {mios="unit:house,device:199/service/SecuritySensor1/Armed"}
+Number   LivingRoomSmokeBatteryLevel "Living Room Smoke Battery Level [%d]" (GDevices) {mios="unit:house,device:199/service/HaDevice1/BatteryLevel"}
+DateTime LivingRoomSmokeBatteryDate "Living Room Smoke Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:199/service/HaDevice1/BatteryDate"}
+DateTime LivingRoomSmokeLastUpdate "Living Room Smoke Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:199/service/HaDevice1/LastUpdate"}
+String   LivingRoomSmokeModeSetting "Living Room Smoke Mode Setting [%s]" (GDevices) {mios="unit:house,device:199/service/HaDevice1/ModeSetting"}
+String   LivingRoomSmokeArmedTripped "Living Room Smoke Armed/Tripped [%s]" (GDevices) {mios="unit:house,device:199/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Living Room CO */
+Number   LivingRoomCOId "ID [%d]" (GDevices) {mios="unit:house,device:200/id"}
+String   LivingRoomCODeviceStatus "Living Room CO Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:200/status"}
+String   LivingRoomCOIgnoreTripTime "Living Room CO Ignore Trip Time [%s]" (GDevices) {mios="unit:house,device:200/service/SecuritySensor1/IgnoreTripTime"}
+DateTime LivingRoomCOLastTrip "Living Room CO Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:200/service/SecuritySensor1/LastTrip"}
+Switch   LivingRoomCOArmed "Living Room CO Armed" (GDevices) {mios="unit:house,device:200/service/SecuritySensor1/Armed"}
+Number   LivingRoomCOBatteryLevel "Living Room CO Battery Level [%d]" (GDevices) {mios="unit:house,device:200/service/HaDevice1/BatteryLevel"}
+DateTime LivingRoomCOBatteryDate "Living Room CO Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:200/service/HaDevice1/BatteryDate"}
+DateTime LivingRoomCOLastUpdate "Living Room CO Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:200/service/HaDevice1/LastUpdate"}
+Contact  LivingRoomCOTripped "Living Room CO Tripped [MAP(en.map):%s]" <contact> (GDevices) {mios="unit:house,device:200/service/SecuritySensor1/Tripped"}
+String   LivingRoomCOModeSetting "Living Room CO Mode Setting [%s]" (GDevices) {mios="unit:house,device:200/service/HaDevice1/ModeSetting"}
+String   LivingRoomCOArmedTripped "Living Room CO Armed/Tripped [%s]" (GDevices) {mios="unit:house,device:200/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - BackDeck Holiday */
+Number   BackDeckHolidayId "ID [%d]" (GDevices) {mios="unit:house,device:201/id"}
+String   BackDeckHolidayDeviceStatus "BackDeck Holiday Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:201/status"}
+Number   BackDeckHolidayConfigured "BackDeck Holiday Configured [%d]" (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/Configured"}
+String   BackDeckHolidayModeSetting "BackDeck Holiday Mode Setting [%s]" (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/ModeSetting"}
+DateTime BackDeckHolidayLastUpdate "BackDeck Holiday Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/LastUpdate"}
+DateTime BackDeckHolidayFirstConfigured "BackDeck Holiday First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/FirstConfigured"}
+Switch   BackDeckHolidayStatus "BackDeck Holiday Status" (GDevices,GRoom5,OutsideLights) {mios="unit:house,device:201/service/SwitchPower1/Status"}
+DateTime BackDeckHolidayLastPollSuccess "BackDeck Holiday Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:201/service/ZWaveNetwork1/LastPollSuccess"}
+Number   BackDeckHolidayConsecutivePollFails "BackDeck Holiday Consecutive Poll Fails [%d]" (GDevices,GRoom5) {mios="unit:house,device:201/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   BackDeckHolidayTarget "BackDeck Holiday Target [%d]" (GDevices,GRoom5) {mios="unit:house,device:201/service/SwitchPower1/Target"}
+String   BackDeckHolidaySupportedColors "BackDeck Holiday FIXME SupportedColors [%s]" (GDevices,GRoom5) {mios="unit:house,device:201/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+Number   BackDeckHolidayPollRatings "BackDeck Holiday Poll Ratings [%.4f]" (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/PollRatings"}
+Number   BackDeckHolidayCommFailure "BackDeck Holiday Comms Failure [%d]" (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/CommFailure"}
+DateTime BackDeckHolidayCommFailureTime "BackDeck Holiday Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/CommFailureTime"}
+String   BackDeckHolidayCommFailureAlarm "BackDeck Holiday Comms Failure Alarm [%s]" (GDevices,GRoom5) {mios="unit:house,device:201/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Camera PC */
+Number   CameraPCId "ID [%d]" (GDevices) {mios="unit:house,device:202/id"}
+String   CameraPCDeviceStatus "Camera PC Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:202/status"}
+String   CameraPCUI7Check "Camera PC FIXME UI7Check [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/PingSensor1/UI7Check"}
+Number   CameraPCPeriod "Camera PC Period [%d]" (GDevices,GRoom12) {mios="unit:house,device:202/service/PingSensor1/Period"}
+String   CameraPCAddress "Camera PC Address [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/PingSensor1/Address"}
+String   CameraPCInvert "Camera PC Invert [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/PingSensor1/Invert"}
+Number   CameraPCTarget "Camera PC Target [%d]" (GDevices,GRoom12) {mios="unit:house,device:202/service/SwitchPower1/Target"}
+Switch   CameraPCStatus "Camera PC Status" (GDevices,GRoom12) {mios="unit:house,device:202/service/SwitchPower1/Status"}
+String   CameraPCAllowedFailure "Camera PC FIXME AllowedFailure [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/PingSensor1/AllowedFailure"}
+DateTime CameraPCLastUpdate "Camera PC Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom12) {mios="unit:house,device:202/service/HaDevice1/LastUpdate"}
+Number   CameraPCConfigured "Camera PC Configured [%d]" (GDevices,GRoom12) {mios="unit:house,device:202/service/HaDevice1/Configured"}
+String   CameraPCCurrentFailureCount "Camera PC FIXME CurrentFailureCount [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/PingSensor1/CurrentFailureCount"}
+String   CameraPCIgnoreTripTime "Camera PC Ignore Trip Time [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/SecuritySensor1/IgnoreTripTime"}
+DateTime CameraPCLastTrip "Camera PC Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom12) {mios="unit:house,device:202/service/SecuritySensor1/LastTrip"}
+Contact  CameraPCTripped "Camera PC Tripped [MAP(en.map):%s]" <contact> (GDevices,GRoom12) {mios="unit:house,device:202/service/SecuritySensor1/Tripped"}
+Switch   CameraPCArmed "Camera PC Armed" (GDevices,GRoom12) {mios="unit:house,device:202/service/SecuritySensor1/Armed"}
+String   CameraPCArmedTripped "Camera PC Armed/Tripped [%s]" (GDevices,GRoom12) {mios="unit:house,device:202/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Cam PC Ping */
+Number   CamPCPingId "ID [%d]" (GDevices) {mios="unit:house,device:203/id"}
+String   CamPCPingDeviceStatus "Cam PC Ping Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:203/status"}
+
+/* Device - ADSB */
+Number   ADSBId "ID [%d]" (GDevices) {mios="unit:house,device:204/id"}
+String   ADSBDeviceStatus "ADSB Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:204/status"}
+String   ADSBDocumentation4 "ADSB Documentation [%s]" (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/Documentation"}
+Number   ADSBConfigured "ADSB Configured [%d]" (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/Configured"}
+String   ADSBModeSetting "ADSB Mode Setting [%s]" (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/ModeSetting"}
+DateTime ADSBLastUpdate "ADSB Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/LastUpdate"}
+DateTime ADSBFirstConfigured "ADSB First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/FirstConfigured"}
+Number   ADSBKWH "ADSB kWh [%.1f kWh]" (GDevices,GRoom13) {mios="unit:house,device:204/service/EnergyMetering1/KWH"}
+DateTime ADSBKWHReading "ADSB kWh Reading [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:204/service/EnergyMetering1/KWHReading"}
+Number   ADSBTarget "ADSB Target [%d]" (GDevices,GRoom13) {mios="unit:house,device:204/service/SwitchPower1/Target"}
+Switch   ADSBStatus "ADSB Status" (GDevices,GRoom13) {mios="unit:house,device:204/service/SwitchPower1/Status"}
+Number   ADSBWatts "ADSB Watts [%.1f W]" (GDevices,GRoom13) {mios="unit:house,device:204/service/EnergyMetering1/Watts"}
+String   ADSBLog "ADSB Log [%s]" (GDevices,GRoom13) {mios="unit:house,device:204/service/EnergyMetering1/Log"}
+String   ADSBActualUsage "ADSB Actual Usage [%s]" (GDevices,GRoom13) {mios="unit:house,device:204/service/EnergyMetering1/ActualUsage"}
+DateTime ADSBLastPollSuccess "ADSB Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom13) {mios="unit:house,device:204/service/ZWaveNetwork1/LastPollSuccess"}
+Number   ADSBConsecutivePollFails "ADSB Consecutive Poll Fails [%d]" (GDevices,GRoom13) {mios="unit:house,device:204/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   ADSBCurrentLevel "ADSB Current Level [%.4f]" (GDevices,GRoom13) {mios="unit:house,device:204/service/GenericSensor1/CurrentLevel"}
+String   ADSBSupportedColors "ADSB FIXME SupportedColors [%s]" (GDevices,GRoom13) {mios="unit:house,device:204/service/urn:micasaverde-com:serviceId:Color1/SupportedColors"}
+Number   ADSBPollRatings "ADSB Poll Ratings [%.4f]" (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/PollRatings"}
+String   ADSBChildrenSameRoom "ADSB Children Same Room [%s]" (GDevices,GRoom13) {mios="unit:house,device:204/service/HaDevice1/ChildrenSameRoom"}
+
+/* Device - Holiday Lights */
+Number   HolidayLightsId "ID [%d]" (GDevices) {mios="unit:house,device:205/id"}
+String   HolidayLightsDeviceStatus "Holiday Lights Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:205/status"}
+Number   HolidayLightsConfigured "Holiday Lights Configured [%d]" (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/Configured"}
+String   HolidayLightsModeSetting "Holiday Lights Mode Setting [%s]" (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/ModeSetting"}
+DateTime HolidayLightsLastUpdate "Holiday Lights Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/LastUpdate"}
+DateTime HolidayLightsFirstConfigured "Holiday Lights First Configured [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/FirstConfigured"}
+Switch   HolidayLightsStatus "Holiday Lights Status" (GDevices,GRoom8,OutsideLights) {mios="unit:house,device:205/service/SwitchPower1/Status"}
+DateTime HolidayLightsLastPollSuccess "Holiday Lights Last Poll Success [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:205/service/ZWaveNetwork1/LastPollSuccess"}
+Number   HolidayLightsConsecutivePollFails "Holiday Lights Consecutive Poll Fails [%d]" (GDevices,GRoom8) {mios="unit:house,device:205/service/ZWaveNetwork1/ConsecutivePollFails"}
+Number   HolidayLightsTarget "Holiday Lights Target [%d]" (GDevices,GRoom8) {mios="unit:house,device:205/service/SwitchPower1/Target"}
+Number   HolidayLightsCommFailure "Holiday Lights Comms Failure [%d]" (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/CommFailure"}
+DateTime HolidayLightsCommFailureTime "Holiday Lights Comms Failure Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/CommFailureTime"}
+Number   HolidayLightsPollRatings "Holiday Lights Poll Ratings [%.4f]" (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/PollRatings"}
+String   HolidayLightsCommFailureAlarm "Holiday Lights Comms Failure Alarm [%s]" (GDevices,GRoom8) {mios="unit:house,device:205/service/HaDevice1/CommFailureAlarm"}
+
+/* Device - Upstairs Smoke */
+Number   UpstairsSmokeId "ID [%d]" (GDevices) {mios="unit:house,device:206/id"}
+String   UpstairsSmokeDeviceStatus "Upstairs Smoke Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:206/status"}
+String   UpstairsSmokeIgnoreTripTime "Upstairs Smoke Ignore Trip Time [%s]" (GDevices) {mios="unit:house,device:206/service/SecuritySensor1/IgnoreTripTime"}
+DateTime UpstairsSmokeLastTrip "Upstairs Smoke Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:206/service/SecuritySensor1/LastTrip"}
+Switch   UpstairsSmokeArmed "Upstairs Smoke Armed" (GDevices) {mios="unit:house,device:206/service/SecuritySensor1/Armed"}
+Number   UpstairsSmokeBatteryLevel "Upstairs Smoke Battery Level [%d]" (GDevices) {mios="unit:house,device:206/service/HaDevice1/BatteryLevel"}
+DateTime UpstairsSmokeBatteryDate "Upstairs Smoke Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:206/service/HaDevice1/BatteryDate"}
+DateTime UpstairsSmokeLastUpdate "Upstairs Smoke Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:206/service/HaDevice1/LastUpdate"}
+String   UpstairsSmokeModeSetting "Upstairs Smoke Mode Setting [%s]" (GDevices) {mios="unit:house,device:206/service/HaDevice1/ModeSetting"}
+String   UpstairsSmokeArmedTripped "Upstairs Smoke Armed/Tripped [%s]" (GDevices) {mios="unit:house,device:206/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - Upstairs CO */
+Number   UpstairsCOId "ID [%d]" (GDevices) {mios="unit:house,device:207/id"}
+String   UpstairsCODeviceStatus "Upstairs CO Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:207/status"}
+String   UpstairsCOIgnoreTripTime "Upstairs CO Ignore Trip Time [%s]" (GDevices) {mios="unit:house,device:207/service/SecuritySensor1/IgnoreTripTime"}
+DateTime UpstairsCOLastTrip "Upstairs CO Last Trip [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:207/service/SecuritySensor1/LastTrip"}
+Switch   UpstairsCOArmed "Upstairs CO Armed" (GDevices) {mios="unit:house,device:207/service/SecuritySensor1/Armed"}
+Number   UpstairsCOBatteryLevel "Upstairs CO Battery Level [%d]" (GDevices) {mios="unit:house,device:207/service/HaDevice1/BatteryLevel"}
+DateTime UpstairsCOBatteryDate "Upstairs CO Battery Date [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:207/service/HaDevice1/BatteryDate"}
+DateTime UpstairsCOLastUpdate "Upstairs CO Last Update [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GDevices) {mios="unit:house,device:207/service/HaDevice1/LastUpdate"}
+Contact  UpstairsCOTripped "Upstairs CO Tripped [MAP(en.map):%s]" <contact> (GDevices) {mios="unit:house,device:207/service/SecuritySensor1/Tripped"}
+String   UpstairsCOModeSetting "Upstairs CO Mode Setting [%s]" (GDevices) {mios="unit:house,device:207/service/HaDevice1/ModeSetting"}
+String   UpstairsCOArmedTripped "Upstairs CO Armed/Tripped [%s]" (GDevices) {mios="unit:house,device:207/service/SecuritySensor1/ArmedTripped"}
+
+/* Device - _Temperature Sensor */
+Number   TemperatureSensorId "ID [%d]" (GDevices) {mios="unit:house,device:208/id"}
+String   TemperatureSensorDeviceStatus "_Temperature Sensor Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:208/status"}
+
+/* Device - _GET_LANG(generic_sensor,sensor) */
+/* Number   GETLANGgenericsensor,sensorId "ID [%d]" (GDevices) {mios="unit:house,device:209/id"}
+String   GETLANGgenericsensor,sensorDeviceStatus "_GET_LANG(generic_sensor,sensor) Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:209/status"}
+Switch   GETLANGgenericsensor,sensorArmed "_GET_LANG(generic_sensor,sensor) Armed" (GDevices,GRoom13) {mios="unit:house,device:209/service/SecuritySensor1/Armed"}
+String   GETLANGgenericsensor,sensorModeSetting "_GET_LANG(generic_sensor,sensor) Mode Setting [%s]" (GDevices,GRoom13) {mios="unit:house,device:209/service/HaDevice1/ModeSetting"}
+String   GETLANGgenericsensor,sensorArmedTripped "_GET_LANG(generic_sensor,sensor) Armed/Tripped [%s]" (GDevices,GRoom13) {mios="unit:house,device:209/service/SecuritySensor1/ArmedTripped"}
+
+/* Device -  */
+Number   212Id "ID [%d]" (GDevices) {mios="unit:house,device:212/id"}
+String   212DeviceStatus " Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:212/status"}
+
+/* Device - _Temperature Sensor 1 */
+Number   TemperatureSensor1Id "ID [%d]" (GDevices) {mios="unit:house,device:218/id"}
+String   TemperatureSensor1DeviceStatus "_Temperature Sensor 1 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:218/status"}
+
+/* Device - _Generic IO 1 */
+Number   GenericIO1Id "ID [%d]" (GDevices) {mios="unit:house,device:232/id"}
+String   GenericIO1DeviceStatus "_Generic IO 1 Device Status [MAP(miosDeviceStatusUI.map):%s]" (GDevices) {mios="unit:house,device:232/status"}
+
+/* Scene - Lights on at sunset */
+String   SceneLightsonatsunset "Lights on at sunset Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:2/status", autoupdate="false"}
+Contact  SceneLightsonatsunsetActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:2/active"}
+
+/* Scene - Outside lights off at sunrise */
+String   SceneOutsidelightsoffatsunrise "Outside lights off at sunrise Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:3/status", autoupdate="false"}
+Contact  SceneOutsidelightsoffatsunriseActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:3/active"}
+
+/* Scene - Study Light Off at 11pm */
+String   SceneStudyLightOffat11pm "Study Light Off at 11pm Scene" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:6/status", autoupdate="false"}
+Contact  SceneStudyLightOffat11pmActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:6/active"}
+
+/* Scene - Front Porch Lights On */
+String   SceneFrontPorchLightsOn "Front Porch Lights On Scene" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:7/status", autoupdate="false"}
+Contact  SceneFrontPorchLightsOnActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:7/active"}
+
+/* Scene - Porch Lights on at 2am */
+String   ScenePorchLightsonat2am "Porch Lights on at 2am Scene" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:8/status", autoupdate="false"}
+Contact  ScenePorchLightsonat2amActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:8/active"}
+
+/* Scene - Porch Lights Off 4am */
+String   ScenePorchLightsOff4am "Porch Lights Off 4am Scene" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:9/status", autoupdate="false"}
+Contact  ScenePorchLightsOff4amActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom1) {mios="unit:house,scene:9/active"}
+
+/* Scene - House Occupied */
+String   SceneHouseOccupied "House Occupied Scene" <sofa> (GScenes) {mios="unit:house,scene:29/status", autoupdate="false"}
+Contact  SceneHouseOccupiedActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:29/active"}
+
+/* Scene - {tone:tts} House Away */
+String   ScenetonettsHouseAway "{tone:tts} House Away Scene" <sofa> (GScenes) {mios="unit:house,scene:30/status", autoupdate="false"}
+Contact  ScenetonettsHouseAwayActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:30/active"}
+
+/* Scene - Doors or Garage - Set Home */
+String   SceneDoorsorGarageSetHome "Doors or Garage - Set Home Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:39/status", autoupdate="false"}
+Contact  SceneDoorsorGarageSetHomeActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:39/active"}
+
+/* Scene - Family unlocked door */
+String   SceneFamilyunlockeddoor "Family unlocked door Scene" <sofa> (GScenes) {mios="unit:house,scene:41/status", autoupdate="false"}
+Contact  SceneFamilyunlockeddoorActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:41/active"}
+
+/* Scene - Paeola Unlock Code Entered */
+String   ScenePaeolaUnlockCodeEntered "Paeola Unlock Code Entered Scene" <sofa> (GScenes) {mios="unit:house,scene:43/status", autoupdate="false"}
+Contact  ScenePaeolaUnlockCodeEnteredActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:43/active"}
+
+/* Scene - Garage Door Opened */
+String   SceneGarageDoorOpened "Garage Door Opened Scene" <sofa> (GScenes) {mios="unit:house,scene:44/status", autoupdate="false"}
+Contact  SceneGarageDoorOpenedActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:44/active"}
+
+/* Scene - Garage Door Closed */
+String   SceneGarageDoorClosed "Garage Door Closed Scene" <sofa> (GScenes) {mios="unit:house,scene:45/status", autoupdate="false"}
+Contact  SceneGarageDoorClosedActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:45/active"}
+
+/* Scene - Back Porch Lights Off At 10 */
+String   SceneBackPorchLightsOffAt10 "Back Porch Lights Off At 10 Scene" <sofa> (GScenes,GRoom5) {mios="unit:house,scene:46/status", autoupdate="false"}
+Contact  SceneBackPorchLightsOffAt10Active "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom5) {mios="unit:house,scene:46/active"}
+
+/* Scene - House To Home */
+Switch   SceneHouseToHome "House To Home" <alarm> (GScenes,GRoom6,DSC) {mios="unit:house,scene:49/status", autoupdate="false"}
+Contact  SceneHouseToHomeActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:49/active"}
+
+/* Scene - MSwitch Chris Home Off */
+String   SceneMSwitchChrisHomeOff "MSwitch Chris Home Off Scene" <sofa> (GScenes) {mios="unit:house,scene:61/status", autoupdate="false"}
+Contact  SceneMSwitchChrisHomeOffActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:61/active"}
+
+/* Scene - MSwitch Chris Home On */
+String   SceneMSwitchChrisHomeOn "MSwitch Chris Home On Scene" <sofa> (GScenes) {mios="unit:house,scene:62/status", autoupdate="false"}
+Contact  SceneMSwitchChrisHomeOnActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:62/active"}
+
+/* Scene - House To Night */
+Switch   SceneHouseToNight "House To Night" <alarm> (GScenes,DSC) {mios="unit:house,scene:63/status", autoupdate="false"}
+Contact  SceneHouseToNightActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:63/active"}
+
+/* Scene - Get Energy 1 Min Interval */
+String   SceneGetEnergy1MinInterval "Get Energy 1 Min Interval Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:65/status", autoupdate="false"}
+Contact  SceneGetEnergy1MinIntervalActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:65/active"}
+
+/* Scene - Collect Temps 5 Min Interval */
+String   SceneCollectTemps5MinInterval "Collect Temps 5 Min Interval Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:66/status", autoupdate="false"}
+Contact  SceneCollectTemps5MinIntervalActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:66/active"}
+
+/* Scene - Scene Chris Phone Ping Good */
+String   SceneSceneChrisPhonePingGood "Scene Chris Phone Ping Good Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:67/status", autoupdate="false"}
+Contact  SceneSceneChrisPhonePingGoodActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:67/active"}
+
+/* Scene - Scene Chris Phone Ping Fail */
+String   SceneSceneChrisPhonePingFail "Scene Chris Phone Ping Fail Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:71/status", autoupdate="false"}
+Contact  SceneSceneChrisPhonePingFailActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:71/active"}
+
+/* Scene - Scene Allyson Phone Ping Good */
+String   SceneSceneAllysonPhonePingGood "Scene Allyson Phone Ping Good Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:74/status", autoupdate="false"}
+Contact  SceneSceneAllysonPhonePingGoodActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:74/active"}
+
+/* Scene - Scene Allyson Phone Ping Fail */
+String   SceneSceneAllysonPhonePingFail "Scene Allyson Phone Ping Fail Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:75/status", autoupdate="false"}
+Contact  SceneSceneAllysonPhonePingFailActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:75/active"}
+
+/* Scene - Turn Nest Away Off */
+String   SceneTurnNestAwayOff "Turn Nest Away Off Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:79/status", autoupdate="false"}
+Contact  SceneTurnNestAwayOffActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:79/active"}
+
+/* Scene - house mode 1 */
+String   Scenehousemode1 "house mode 1 Scene" <sofa> (GScenes) {mios="unit:house,scene:85/status", autoupdate="false"}
+Contact  Scenehousemode1Active "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:85/active"}
+
+/* Scene - house mode 3 */
+String   Scenehousemode3 "house mode 3 Scene" <sofa> (GScenes) {mios="unit:house,scene:86/status", autoupdate="false"}
+Contact  Scenehousemode3Active "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:86/active"}
+
+/* Scene - house mode 2 */
+String   Scenehousemode2 "house mode 2 Scene" <sofa> (GScenes) {mios="unit:house,scene:87/status", autoupdate="false"}
+Contact  Scenehousemode2Active "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:87/active"}
+
+/* Scene - House Away Manual */
+String   SceneHouseAwayManual "House Away Manual Scene" <sofa> (GScenes) {mios="unit:house,scene:89/status", autoupdate="false"}
+Contact  SceneHouseAwayManualActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:89/active"}
+
+/* Scene - Reload Luup Engine */
+String   SceneReloadLuupEngine "Reload Luup Engine Scene" <sofa> (GScenes) {mios="unit:house,scene:91/status", autoupdate="false"}
+Contact  SceneReloadLuupEngineActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:91/active"}
+
+/* Scene - Lights On Someone Home */
+String   SceneLightsOnSomeoneHome "Lights On Someone Home Scene" <sofa> (GScenes) {mios="unit:house,scene:92/status", autoupdate="false"}
+Contact  SceneLightsOnSomeoneHomeActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:92/active"}
+
+/* Scene - All Lights on Alarm */
+String   SceneAllLightsonAlarm "All Lights on Alarm Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:93/status", autoupdate="false"}
+Contact  SceneAllLightsonAlarmActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:93/active"}
+
+/* Scene - Family Code Back Door */
+String   SceneFamilyCodeBackDoor "Family Code Back Door Scene" <sofa> (GScenes) {mios="unit:house,scene:95/status", autoupdate="false"}
+Contact  SceneFamilyCodeBackDoorActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:95/active"}
+
+/* Scene - Reset HEM KWH */
+String   SceneResetHEMKWH "Reset HEM KWH Scene" <sofa> (GScenes) {mios="unit:house,scene:102/status", autoupdate="false"}
+Contact  SceneResetHEMKWHActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:102/active"}
+
+/* Scene - Trigger Alarm on Motion */
+String   SceneTriggerAlarmonMotion "Trigger Alarm on Motion Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:106/status", autoupdate="false"}
+Contact  SceneTriggerAlarmonMotionActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:106/active"}
+
+/* Scene - ReArm House on Unoccupied */
+String   SceneReArmHouseonUnoccupied "ReArm House on Unoccupied Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:107/status", autoupdate="false"}
+Contact  SceneReArmHouseonUnoccupiedActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:107/active"}
+
+/* Scene - Chris Away */
+String   SceneChrisAway "Chris Away Scene" <sofa> (GScenes) {mios="unit:house,scene:18/status", autoupdate="false"}
+Contact  SceneChrisAwayActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:18/active"}
+
+/* Scene - Chris Home */
+String   SceneChrisHome "Chris Home Scene" <sofa> (GScenes) {mios="unit:house,scene:20/status", autoupdate="false"}
+Contact  SceneChrisHomeActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:20/active"}
+
+/* Scene - Alarm AC Loss */
+String   SceneAlarmACLoss "Alarm AC Loss Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:108/status", autoupdate="false"}
+Contact  SceneAlarmACLossActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:108/active"}
+
+/* Scene - Alarm Panel Trouble */
+String   SceneAlarmPanelTrouble "Alarm Panel Trouble Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:109/status", autoupdate="false"}
+Contact  SceneAlarmPanelTroubleActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:109/active"}
+
+/* Scene - House Disarmed */
+String   SceneHouseDisarmed "House Disarmed Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:111/status", autoupdate="false"}
+Contact  SceneHouseDisarmedActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:111/active"}
+
+/* Scene - House Armed Away */
+Switch   SceneHouseArmedAway "Armed Away" <alarm> (GScenes,GRoom6,DSC) {mios="unit:house,scene:112/status", autoupdate="false"}
+Contact  SceneHouseArmedAwayActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:112/active"}
+
+/* Scene - House Armed Stay */
+String   SceneHouseArmedStay "House Armed Stay Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:113/status", autoupdate="false"}
+Contact  SceneHouseArmedStayActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:113/active"}
+
+/* Scene - Master Closet Pwer Fail */
+String   SceneMasterClosetPwerFail "Master Closet Pwer Fail Scene" <sofa> (GScenes) {mios="unit:house,scene:119/status", autoupdate="false"}
+Contact  SceneMasterClosetPwerFailActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:119/active"}
+
+/* Scene - Master Closet Pwr Restore */
+String   SceneMasterClosetPwrRestore "Master Closet Pwr Restore Scene" <sofa> (GScenes) {mios="unit:house,scene:120/status", autoupdate="false"}
+Contact  SceneMasterClosetPwrRestoreActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:120/active"}
+
+/* Scene - Master Pwr Low or Fail */
+String   SceneMasterPwrLoworFail121 "Master Pwr Low or Fail Scene" <sofa> (GScenes) {mios="unit:house,scene:121/status", autoupdate="false"}
+Contact  SceneMasterPwrLoworFail121Active "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:121/active"}
+
+/* Scene - Master Pwr Low or Fail */
+String   SceneMasterPwrLoworFail122 "Master Pwr Low or Fail Scene" <sofa> (GScenes) {mios="unit:house,scene:122/status", autoupdate="false"}
+Contact  SceneMasterPwrLoworFail122Active "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:122/active"}
+
+/* Scene - Roku Pwr Fail Closet */
+String   SceneRokuPwrFailCloset "Roku Pwr Fail Closet Scene" <sofa> (GScenes) {mios="unit:house,scene:123/status", autoupdate="false"}
+Contact  SceneRokuPwrFailClosetActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:123/active"}
+
+/* Scene - Roku Pwr Restore Closet */
+String   SceneRokuPwrRestoreCloset "Roku Pwr Restore Closet Scene" <sofa> (GScenes) {mios="unit:house,scene:125/status", autoupdate="false"}
+Contact  SceneRokuPwrRestoreClosetActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:125/active"}
+
+/* Scene - Instant Arm When Night */
+String   SceneInstantArmWhenNight "Instant Arm When Night Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:130/status", autoupdate="false"}
+Contact  SceneInstantArmWhenNightActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:130/active"}
+
+/* Scene - Turn On Security */
+String   SceneTurnOnSecurity "Turn On Security Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:131/status", autoupdate="false"}
+Contact  SceneTurnOnSecurityActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:131/active"}
+
+/* Scene - New Scene */
+String   SceneNewScene "New Scene Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:132/status", autoupdate="false"}
+Contact  SceneNewSceneActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:132/active"}
+
+/* Scene - Turn Off Security */
+String   SceneTurnOffSecurity "Turn Off Security Scene" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:133/status", autoupdate="false"}
+Contact  SceneTurnOffSecurityActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:133/active"}
+
+/* Scene - Blue Iris to Home */
+String   SceneBlueIristoHome "Blue Iris to Home Scene" <sofa> (GScenes) {mios="unit:house,scene:134/status", autoupdate="false"}
+Contact  SceneBlueIristoHomeActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:134/active"}
+
+/* Scene - Cam PC is Tripped */
+String   SceneCamPCisTripped "Cam PC is Tripped Scene" <sofa> (GScenes) {mios="unit:house,scene:135/status", autoupdate="false"}
+Contact  SceneCamPCisTrippedActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:135/active"}
+
+/* Scene - Cam PC is Not Tripped */
+String   SceneCamPCisNotTripped "Cam PC is Not Tripped Scene" <sofa> (GScenes) {mios="unit:house,scene:136/status", autoupdate="false"}
+Contact  SceneCamPCisNotTrippedActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:136/active"}
+
+/* Scene - Turn On Holiday Lights */
+String   SceneTurnOnHolidayLights "Turn On Holiday Lights Scene" <sofa> (GScenes) {mios="unit:house,scene:137/status", autoupdate="false"}
+Contact  SceneTurnOnHolidayLightsActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:137/active"}
+
+/* Scene - Holiday Lights Off */
+String   SceneHolidayLightsOff "Holiday Lights Off Scene" <sofa> (GScenes) {mios="unit:house,scene:138/status", autoupdate="false"}
+Contact  SceneHolidayLightsOffActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:138/active"}
+
+/* Scene - Reboot Vera */
+String   SceneRebootVera "Reboot Vera Scene" <sofa> (GScenes) {mios="unit:house,scene:139/status", autoupdate="false"}
+Contact  SceneRebootVeraActive "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:139/active"}
+
+/* Scene - back porch alexa test version 2 */
+String   Scenebackporchalexatestversion2 "back porch alexa test version 2 Scene" <sofa> (GScenes) {mios="unit:house,scene:140/status", autoupdate="false"}
+Contact  Scenebackporchalexatestversion2Active "Active [MAP(en.map):%s]" <sofa> (GScenes) {mios="unit:house,scene:140/active"}
+
+/* Scene - House Armed No Nest */
+Switch   SceneHouseArmedNoNest "Armed No Nest" <alarm> (GScenes,GRoom6,DSC) {mios="unit:house,scene:141/status", autoupdate="false"}
+Contact  SceneHouseArmedNoNestActive "Active [MAP(en.map):%s]" <sofa> (GScenes,GRoom6) {mios="unit:house,scene:141/active"}
+
+
+/* If you want more MiOS Internals, uncomment the following. */
+/* Number   SystemDataVersion "System Data Version [%d]" (GSystem) {mios="unit:house,system:/DataVersion"}                               */
+/* DateTime SystemLoadTime "System Load Time [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GSystem) {mios="unit:house,system:/LoadTime"}    */
+/* String   SystemLocalTime "System Local Time [%s]" (GSystem) {mios="unit:house,system:/LocalTime"}                                     */
+/* DateTime SystemTimeStamp "System Time Stamp [%1$ta, %1$tm/%1$te %1$tR]" <calendar> (GSystem) {mios="unit:house,system:/TimeStamp"} */
+/* Number   SystemUserDataDataVersion "System User Data Version [%d]" (GSystem) {mios="unit:house,system:/UserData_DataVersion"}         */
+
+/* If you want Z-Wave Status, uncomment the following. */
+/* Number   SystemZWaveStatus "System ZWave Status [%d]" (GSystem) {mios="unit:house,system:/ZWaveStatus"}                                            */
+/* String   SystemZWaveStatusString "System ZWave Status String [%d]" (GSystem) {mios="unit:house,system:/ZWaveStatus,in:MAP(miosZWaveStatusIn.map)"} */
